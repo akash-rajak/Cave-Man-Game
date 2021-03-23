@@ -23,7 +23,7 @@ public class OptionsActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		clickSound();
+		//clickSound();
 		setContentView(R.layout.options_layout);
 	}
 

@@ -23,7 +23,7 @@ public class HelpActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		clickSound();
+		//clickSound();
 		setContentView(R.layout.help_layout);
 	}
 

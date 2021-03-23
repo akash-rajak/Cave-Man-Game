@@ -23,7 +23,7 @@ public class HighscoresActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		clickSound();
+		//clickSound();
 		setContentView(R.layout.highscores_layout);
 	}
 

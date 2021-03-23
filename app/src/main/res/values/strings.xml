@@ -4,9 +4,11 @@
     <string name="app_name">Cave</string>
     <string name="splash_screen">SplashScreen</string>
     <string name="highscores">highscores</string>
-    <string name="credits_1">Game design by Akash</string>
-    <string name="credits_2">Graphics design by Hritam</string>
+    <string name="credits_1">Akash</string>
+    <string name="credits_2">Hritam</string>
+    <!--
     <string name="credits_3">Music and sound effects by Both</string>
+    -->
     <string name="options">options</string>
     <string name="help">[ The game is very simple. If we see GAME OVER! after one level is finished, to go to next level just tap anywhere on the screen. ]</string>
 </resources>

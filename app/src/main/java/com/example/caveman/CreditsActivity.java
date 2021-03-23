@@ -26,7 +26,7 @@ public class CreditsActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		clickSound();
+		//clickSound();
 		setContentView(R.layout.credits_layout);
 		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
 		mFlipper.startFlipping();
