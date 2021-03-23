@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level>
+	<enemy type="SimpleEnemy" time="1" position="1" />
+	<enemy type="SimpleEnemy" time="1" position="7" />
+
+	<enemy type="SimpleEnemy" time="2" position="2" />
+	<enemy type="SimpleEnemy" time="2" position="6" />
+
+	<enemy type="SimpleEnemy" time="3" position="3" />
+	<enemy type="SimpleEnemy" time="3" position="5" />
+
+	<enemy type="JumpingEnemy" time="4" position="1" />
+	<enemy type="SimpleEnemy" time="4" position="2" />
+	<enemy type="JumpingEnemy" time="4" position="3" />
+	<enemy type="SimpleEnemy" time="4" position="4" />
+	<enemy type="JumpingEnemy" time="4" position="5" />
+	<enemy type="SimpleEnemy" time="4" position="6" />
+	<enemy type="JumpingEnemy" time="4" position="7" />
+
+	<enemy type="SimpleEnemy" time="5" position="3" />
+	<enemy type="SimpleEnemy" time="5" position="5" />
+
+	<enemy type="SimpleEnemy" time="6" position="2" />
+	<enemy type="SimpleEnemy" time="6" position="6" />
+
+	<enemy type="SimpleEnemy" time="7" position="1" />
+	<enemy type="SimpleEnemy" time="7" position="7" />
+</level>
