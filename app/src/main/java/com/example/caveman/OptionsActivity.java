@@ -7,24 +7,64 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
-public class OptionsActivity extends Activity {
+public class OptionsActivity extends Activity implements AnimationListener {
+	//private Button rateButton;
+
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
 	private MediaPlayer mp;//Creates a new MediaPlayer to play any kind of sound
 	private void clickSound() {// this function Plays a sound when a button is clicked.
 		if (mp != null) {
 			mp.release();
 		}
-		mp = MediaPlayer.create(getApplicationContext(), R.raw.music2);
+		mp = MediaPlayer.create(getApplicationContext(), R.raw.click);
 		mp.start();
+	}
+
+	RatingBar ratingBar;
+	Button ratebutton;
+
+	private void createOptionButtons() {
+		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
+
+		// for GameButton ----------------------
+		ratebutton = (Button) findViewById(R.id.Rate);
+		ratebutton.startAnimation(AnimationUtils.loadAnimation(OptionsActivity.this, R.anim.slide_down));
+		ratebutton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				clickSound();
+				ratebutton.startAnimation(animation1);
+				animation1.setAnimationListener(OptionsActivity.this);
+			}
+		});
 	}
 
 	// This function is called when the activity is first created.
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+
 		super.onCreate(savedInstanceState);
 		//clickSound();
 		setContentView(R.layout.options_layout);
+		createOptionButtons();
+
+		ratingBar = findViewById(R.id.rating_bar);
+		ratebutton = findViewById(R.id.Rate);
+
+		ratebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				String s = String.valueOf(ratingBar.getRating());
+				Toast.makeText(getApplicationContext(),"Rated : " + s + " STAR ",Toast.LENGTH_SHORT).show();
+			}
+		});
 	}
 
 	// This function handles the condition when backbutton is clicked
@@ -37,5 +77,20 @@ public class OptionsActivity extends Activity {
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	public void onAnimationStart(Animation animation) {
+
+	}
+
+	@Override
+	public void onAnimationEnd(Animation animation) {
+		finish();
+	}
+
+	@Override
+	public void onAnimationRepeat(Animation animation) {
+
 	}
 }

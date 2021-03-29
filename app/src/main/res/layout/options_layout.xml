@@ -30,4 +30,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@null" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dip"
+        android:layout_marginLeft="180dip"
+        android:numStars="5"
+        android:stepSize="1.5" />
+
+    <Button
+        android:id="@+id/Rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dip"
+        android:layout_marginLeft="290dip"
+        android:layout_marginRight="200dip"
+        android:background="@layout/ratebutton_layout"
+        android:soundEffectsEnabled="false" />
+
+
 </RelativeLayout>
