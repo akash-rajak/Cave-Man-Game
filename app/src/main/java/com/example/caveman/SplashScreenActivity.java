@@ -21,7 +21,8 @@ public class SplashScreenActivity extends Activity {
 		if (mp != null) {
 			mp.release();
 		}
-		mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background);
+		//mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background);
+		mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background_1);
 		mp.start();
 	}
 
@@ -30,6 +31,9 @@ public class SplashScreenActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
+
+		//Toast.makeText(SplashScreenActivity.this,"Firebase Connection Success",Toast.LENGTH_LONG).show();
+
 		clickSound();
 		// thread for displaying the splash screen
 		splashThread = new Thread() {

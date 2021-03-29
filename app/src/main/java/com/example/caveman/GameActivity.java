@@ -4,6 +4,7 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.view.Display;
 import android.view.KeyEvent;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
@@ -19,6 +21,13 @@ public class GameActivity extends Activity {
 	private com.example.caveman.GameView surface;// The OpenGL ES layer of the game
 	private Bundle extras;// A bundle to pass data from an Activity to a View
 	private String level = "1";// the default level is taken as 1, if user doed not select any level
+
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	/** Creates a new Pipe object */
+	private com.example.caveman.Pipe pipe;
+
+	private Paint paint = new Paint();
+	//---------------------------------------------------------------------------------------------------------------------------------------------
 
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
 	private MediaPlayer mp;//Creates a new MediaPlayer to play any kind of sound
@@ -50,6 +59,26 @@ public class GameActivity extends Activity {
 		setContentView(surface);
 		addContentView(userInter, new LayoutParams(LayoutParams.FILL_PARENT,
 				LayoutParams.FILL_PARENT));
+
+		//------------------------------------------------------------------------------------------
+
+		int score = 200;
+		PlayerModel playerModel;
+		try{
+			playerModel = new PlayerModel(-1,score);
+			Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();
+		}
+		catch(Exception e){
+			Toast.makeText(GameActivity.this,"Error",Toast.LENGTH_SHORT).show();
+			playerModel = new PlayerModel(-1,0);
+		}
+
+		ScoreDB scoredb = new ScoreDB(GameActivity.this);
+		boolean success = scoredb.addOne(playerModel);
+		Toast.makeText(GameActivity.this,"Data Inserted = " + success,Toast.LENGTH_SHORT).show();
+
+		//------------------------------------------------------------------------------------------
+
 	}
 
 	// This function handles the occasion that this Activity finishes ---------------------------------------------
