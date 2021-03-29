@@ -93,7 +93,8 @@ public class GameActivity extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			Intent Menu = new Intent(GameActivity.this, MainActivity.class);
+			Intent Menu = new Intent(GameActivity.this, LevelSelect.class);//on backkey , takes us to levelselect page
+			// Intent Menu = new Intent(GameActivity.this, MainActivity.class);// on backkey , takes us to mainActivity page
 			// clear the pipe, as it is static and may not clear itself
 			userInter.onBackButton();
 			// by calling the following I free up some memory and I avoid program crashes
