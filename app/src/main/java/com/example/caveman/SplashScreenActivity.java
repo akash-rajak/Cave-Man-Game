@@ -21,8 +21,8 @@ public class SplashScreenActivity extends Activity {
 		if (mp != null) {
 			mp.release();
 		}
-		//mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background);
-		mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background_1);
+		mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background);
+		//mp = MediaPlayer.create(getApplicationContext(), R.raw.splash_background_1);
 		mp.start();
 	}
 
