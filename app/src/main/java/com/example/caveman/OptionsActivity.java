@@ -14,6 +14,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class OptionsActivity extends Activity implements AnimationListener {
 	//private Button rateButton;
@@ -30,6 +31,7 @@ public class OptionsActivity extends Activity implements AnimationListener {
 
 	RatingBar ratingBar;
 	Button ratebutton;
+	ToggleButton togglebutton;
 
 	private void createOptionButtons() {
 		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
@@ -65,6 +67,24 @@ public class OptionsActivity extends Activity implements AnimationListener {
 				Toast.makeText(getApplicationContext(),"Rated : " + s + " STAR ",Toast.LENGTH_SHORT).show();
 			}
 		});
+
+		togglebutton = findViewById(R.id.toggle1);
+		togglebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(togglebutton.isChecked()){
+					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.believer);
+					mp.start();
+				}
+				else{
+					mp.stop();
+					mp.release();
+					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 	}
 
 	// This function handles the condition when backbutton is clicked

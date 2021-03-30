@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ToggleButton;
 
 public class HelpActivity extends Activity {
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
@@ -19,12 +21,32 @@ public class HelpActivity extends Activity {
 		mp.start();
 	}
 
+	ToggleButton togglebutton;
+	
 	// This method is called when the activity is first created.
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//clickSound();
 		setContentView(R.layout.help_layout);
+
+		togglebutton = findViewById(R.id.toggle3);
+		togglebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(togglebutton.isChecked()){
+					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.casle_of_glass);
+					mp.start();
+				}
+				else{
+					mp.stop();
+					mp.release();
+					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 	}
 
 	// This function handles the case when back key is pressed

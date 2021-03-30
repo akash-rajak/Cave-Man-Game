@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -50,6 +51,20 @@
         android:layout_marginRight="200dip"
         android:background="@layout/ratebutton_layout"
         android:soundEffectsEnabled="false" />
+
+    <ToggleButton
+        android:id="@+id/toggle1"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="500dip"
+        android:layout_marginTop="20dip"
+        android:background="#000000"
+        android:drawableStart="@drawable/togglebutton_layout"
+        android:text="ToggleButton"
+        android:textColor="#D50000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:visibility="invisible" />
 
 
 </RelativeLayout>

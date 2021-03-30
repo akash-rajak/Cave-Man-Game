@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.widget.ToggleButton;
 import android.widget.ViewFlipper;
 
 public class CreditsActivity extends Activity {
@@ -22,6 +24,8 @@ public class CreditsActivity extends Activity {
 
 	private ViewFlipper mFlipper;//A flipper to switch between the credits
 
+	ToggleButton togglebutton;
+
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,24 @@ public class CreditsActivity extends Activity {
 		setContentView(R.layout.credits_layout);
 		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
 		mFlipper.startFlipping();
+
+		togglebutton = findViewById(R.id.toggle4);
+		togglebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(togglebutton.isChecked()){
+					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.final_masquerade);
+					mp.start();
+				}
+				else{
+					mp.stop();
+					mp.release();
+					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 	}
 
 	// When the back key is pressed, this Activity finishes and the menu button are visible to us

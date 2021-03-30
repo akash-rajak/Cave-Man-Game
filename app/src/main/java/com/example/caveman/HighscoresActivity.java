@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.List;
 
@@ -29,6 +30,8 @@ public class HighscoresActivity extends Activity {
 
 	/** Creates a new Pipe object */
 	private com.example.caveman.Pipe pipe;
+
+	ToggleButton togglebutton;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -60,6 +63,24 @@ public class HighscoresActivity extends Activity {
 			}
 		};
 		lv_playerList.setAdapter(playerArrayAdapter);
+
+		togglebutton = findViewById(R.id.toggle2);
+		togglebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(togglebutton.isChecked()){
+					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.demons);
+					mp.start();
+				}
+				else{
+					mp.stop();
+					mp.release();
+					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 
 
 		//Toast.makeText(HighscoresActivity.this,everyone.toString(), Toast.LENGTH_SHORT).show(); // this will display in toast message format
