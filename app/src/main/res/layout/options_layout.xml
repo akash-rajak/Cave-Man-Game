@@ -38,7 +38,7 @@
         android:layout_marginTop="100dip"
         android:layout_marginLeft="180dip"
         android:numStars="5"
-        android:stepSize="1.5" />
+        android:stepSize="0.2" />
 
     <Button
         android:id="@+id/Rate"
