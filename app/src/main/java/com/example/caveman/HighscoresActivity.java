@@ -110,6 +110,8 @@ public class HighscoresActivity extends Activity {
 					MainActivity.class);
 			startActivity(Menu);
 			finish();
+			mp.stop();
+			mp.release();
 			return true;
 		}
 

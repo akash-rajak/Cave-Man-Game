@@ -61,6 +61,8 @@ public class CreditsActivity extends Activity {
 			Intent Menu = new Intent(CreditsActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
+			mp.stop();
+			mp.release();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);

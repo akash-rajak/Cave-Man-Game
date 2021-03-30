@@ -105,6 +105,9 @@ public class GameActivity extends Activity {
 			surface.onPause();
 			startActivity(Menu);
 			finish();
+
+			mp.stop();
+			mp.release();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
