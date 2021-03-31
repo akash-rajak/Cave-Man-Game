@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.List;
@@ -87,18 +89,18 @@ public class HighscoresActivity extends Activity {
 		// but we would like to display in scrollable list
 
 
-//		lv_playerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//			@Override
-//			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//				PlayerModel clickedPlayer = (PlayerModel) parent.getItemAtPosition(position);
-//				scoredb.deleteOne(clickedPlayer);
-//
-//				ArrayAdapter playerArrayAdapter = new ArrayAdapter<PlayerModel>(HighscoresActivity.this, android.R.layout.simple_list_item_1,everyone);
-//				lv_playerList.setAdapter(playerArrayAdapter);
-//
-//				Toast.makeText(HighscoresActivity.this,"Deleted = " + clickedPlayer.toString(),Toast.LENGTH_SHORT).show();
-//			}
-//		});
+		lv_playerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				PlayerModel clickedPlayer = (PlayerModel) parent.getItemAtPosition(position);
+				scoredb.deleteOne(clickedPlayer);
+
+				ArrayAdapter playerArrayAdapter = new ArrayAdapter<PlayerModel>(HighscoresActivity.this, android.R.layout.simple_list_item_1,everyone);
+				lv_playerList.setAdapter(playerArrayAdapter);
+
+				Toast.makeText(HighscoresActivity.this,"Deleted = " + clickedPlayer.toString(),Toast.LENGTH_SHORT).show();
+			}
+		});
 		//-------------------------------------------------------------------------------------------------------------------------------------
 	}
 
