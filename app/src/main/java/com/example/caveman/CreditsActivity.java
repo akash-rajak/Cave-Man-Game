@@ -19,19 +19,19 @@ public class CreditsActivity extends Activity {
 			mp.release();
 		}
 		mp = MediaPlayer.create(getApplicationContext(), R.raw.music2);
-		mp.start();
+		mp.start();// media player is started
 	}
 
 	private ViewFlipper mFlipper;//A flipper to switch between the credits
 
-	ToggleButton togglebutton;
+	ToggleButton togglebutton;// a togglebutton variable
 
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//clickSound();
-		setContentView(R.layout.credits_layout);
+		setContentView(R.layout.credits_layout);// content of credits_layout.xml are set, on credits page
 		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
 		mFlipper.startFlipping();
 
@@ -45,8 +45,8 @@ public class CreditsActivity extends Activity {
 					mp.start();
 				}
 				else{
-					mp.stop();
-					mp.release();
+					mp.stop();// when backkey is pressed , the music stopped
+					mp.release();// and also music is released
 					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
 				}
 			}
@@ -61,8 +61,8 @@ public class CreditsActivity extends Activity {
 			Intent Menu = new Intent(CreditsActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-			mp.stop();
-			mp.release();
+			mp.stop();// when backkey is pressed , the music stopped
+			mp.release();// and also music is released
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);

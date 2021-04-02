@@ -50,7 +50,7 @@ public class GameActivity extends Activity {
 		Display display = getWindowManager().getDefaultDisplay();
 		int width = display.getWidth();
 		int height = display.getHeight();
-		clickSound();
+		clickSound();// this is called to start playing music
 		userInter = new com.example.caveman.UserInteract(this);
 		userInter.initActions();
 		extras = this.getIntent().getExtras();
@@ -62,15 +62,16 @@ public class GameActivity extends Activity {
 
 		//------------------------------------------------------------------------------------------
 
-		int score = 140;
+		int score = 90;
 		PlayerModel playerModel;
 		try{
-			playerModel = new PlayerModel(-1,score);
-			Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();
+			playerModel = new PlayerModel(-1,Integer.parseInt(level),score);
+			Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();// toast message is shown on screen
 		}
 		catch(Exception e){
+			// if this fails
 			Toast.makeText(GameActivity.this,"Error",Toast.LENGTH_SHORT).show();
-			playerModel = new PlayerModel(-1,0);
+			playerModel = new PlayerModel(-1,-1, 0);
 		}
 
 		ScoreDB scoredb = new ScoreDB(GameActivity.this);

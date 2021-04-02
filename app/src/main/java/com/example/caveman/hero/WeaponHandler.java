@@ -106,6 +106,7 @@ public class WeaponHandler extends TextureLoader {
 	}
 
 
+	// function returns the distance between the points A and B
 	private int distanceAB(int firstX, int firstY, int secondX, int secondY) {
 		if (firstX - secondX == 0) {
 			ac = 0;

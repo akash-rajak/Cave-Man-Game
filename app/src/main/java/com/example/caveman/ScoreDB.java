@@ -16,19 +16,23 @@ import java.util.List;
 public class ScoreDB extends SQLiteOpenHelper {
 
     public static final String PLAYER_TABLE = "PLAYER_TABLE";
-    public static final String COLUMN_PLAYER_SCORE = "PLAYER_SCORE";
     public static final String COLUMN_ID = "ID";
+    public static final String COLUMN_PLAYER_LEVEL = "PLAYER_LEVEL";
+    public static final String COLUMN_PLAYER_SCORE = "PLAYER_SCORE";
 
+    // constructor for ScoreDB class and passing to the parent
     public ScoreDB(@Nullable Context context) {
         super(context, "SCORE.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement= "CREATE TABLE " + PLAYER_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_SCORE + " INT)";
-        db.execSQL(createTableStatement);
+        // SQL statement that will generate SQLite table
+        String createTableStatement= "CREATE TABLE " + PLAYER_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_LEVEL + " INT, " + COLUMN_PLAYER_SCORE + " INT)";
+        db.execSQL(createTableStatement);// db comes from parameter we are passing int he onCreate function
     }
 
+    // this is called if the version number changes. It prevents previous user apps from breaking when you change the database design
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
@@ -38,6 +42,7 @@ public class ScoreDB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
+        cv.put(COLUMN_PLAYER_LEVEL,playermodel.getLevel_no());
         cv.put(COLUMN_PLAYER_SCORE,playermodel.getPlayer_score());
 
         long insert = db.insert(PLAYER_TABLE, null, cv);
@@ -73,8 +78,9 @@ public class ScoreDB extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                 int playerID = cursor.getInt(0);
-                int playerScore = cursor.getInt(1);
-                PlayerModel newPlayer = new PlayerModel(playerID,playerScore);
+                int playerLevel = cursor.getInt(1);
+                int playerScore = cursor.getInt(2);
+                PlayerModel newPlayer = new PlayerModel(playerID,playerLevel,playerScore);
                 returnList.add(newPlayer);
             }while(cursor.moveToNext());
         }

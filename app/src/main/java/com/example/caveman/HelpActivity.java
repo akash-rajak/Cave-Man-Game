@@ -21,7 +21,7 @@ public class HelpActivity extends Activity {
 		mp.start();
 	}
 
-	ToggleButton togglebutton;
+	ToggleButton togglebutton;// a togglebutton variable
 	
 	// This method is called when the activity is first created.
 	@Override
