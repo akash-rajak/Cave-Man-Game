@@ -62,7 +62,7 @@ public class GameActivity extends Activity {
 
 		//------------------------------------------------------------------------------------------
 
-		int score = 200;
+		int score = 140;
 		PlayerModel playerModel;
 		try{
 			playerModel = new PlayerModel(-1,score);

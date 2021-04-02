@@ -49,18 +49,18 @@ public class ScoreDB extends SQLiteOpenHelper {
         }
     }
 
-    public boolean deleteOne(PlayerModel playerModel){
-        SQLiteDatabase db = this.getWritableDatabase();
-        String queryString = "DELETE FROM " + PLAYER_TABLE +  " WHERE " + COLUMN_ID + " = " + playerModel.getId();
-
-        Cursor cursor = db.rawQuery(queryString, null);
-        if(cursor.moveToFirst()){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+//    public boolean deleteOne(PlayerModel playerModel){
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        String queryString = "DELETE FROM " + PLAYER_TABLE +  " WHERE " + COLUMN_ID + " = " + playerModel.getId();
+//
+//        Cursor cursor = db.rawQuery(queryString, null);
+//        if(cursor.moveToFirst()){
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+//    }
 
     public List<PlayerModel> getEveryone(){
         List<PlayerModel> returnList = new ArrayList<>();
