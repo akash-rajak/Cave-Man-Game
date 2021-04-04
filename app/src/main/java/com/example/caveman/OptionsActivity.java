@@ -94,8 +94,8 @@ public class OptionsActivity extends Activity implements AnimationListener {
 			Intent Menu = new Intent(OptionsActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-			mp.stop();
-			mp.release();
+//			mp.stop();
+//			mp.release();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);

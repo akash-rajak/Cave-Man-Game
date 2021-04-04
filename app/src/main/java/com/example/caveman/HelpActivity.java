@@ -56,8 +56,8 @@ public class HelpActivity extends Activity {
 			Intent Menu = new Intent(HelpActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-			mp.stop();
-			mp.release();
+//			mp.stop();
+//			mp.release();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);

@@ -62,11 +62,11 @@ public class GameActivity extends Activity {
 
 		//------------------------------------------------------------------------------------------
 
-		int score = 90;
+		int score = 70;
 		PlayerModel playerModel;
 		try{
 			playerModel = new PlayerModel(-1,Integer.parseInt(level),score);
-			Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();// toast message is shown on screen
+			//Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();// toast message is shown on screen
 		}
 		catch(Exception e){
 			// if this fails
@@ -76,7 +76,7 @@ public class GameActivity extends Activity {
 
 		ScoreDB scoredb = new ScoreDB(GameActivity.this);
 		boolean success = scoredb.addOne(playerModel);
-		Toast.makeText(GameActivity.this,"Data Inserted = " + success,Toast.LENGTH_SHORT).show();
+		//Toast.makeText(GameActivity.this,"Data Inserted = " + success,Toast.LENGTH_SHORT).show();
 
 		//------------------------------------------------------------------------------------------
 
@@ -94,8 +94,8 @@ public class GameActivity extends Activity {
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
-			Intent Menu = new Intent(GameActivity.this, LevelSelect.class);//on backkey , takes us to levelselect page
-			// Intent Menu = new Intent(GameActivity.this, MainActivity.class);// on backkey , takes us to mainActivity page
+			//Intent Menu = new Intent(GameActivity.this, LevelSelect.class);//on backkey , takes us to levelselect page
+			 Intent Menu = new Intent(GameActivity.this, MainActivity.class);// on backkey , takes us to mainActivity page
 			// clear the pipe, as it is static and may not clear itself
 			userInter.onBackButton();
 			// by calling the following I free up some memory and I avoid program crashes
