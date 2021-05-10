@@ -49,6 +49,7 @@ public class HelpActivity extends Activity {
 			}
 		});
 
+		// Adding demo video in the help activity ---------------------------------------------------------
 		VideoView videoView;//Initialize the variable
 		videoView = findViewById(R.id.videoView);// Assigning the variable
 
@@ -58,7 +59,7 @@ public class HelpActivity extends Activity {
 		// set the mediacontroller with videoview object
 		videoView.setMediaController(mediaController);
 
-
+		//-------------------------------------------------------------------------------------------------
 
 	}
 

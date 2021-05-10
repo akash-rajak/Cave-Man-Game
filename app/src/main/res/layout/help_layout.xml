@@ -39,8 +39,8 @@
                 android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dip"
-                android:layout_marginLeft="50dip"
-                android:layout_marginRight="50dip"
+                android:layout_marginLeft="90dip"
+                android:layout_marginRight="0dip"
                 android:layout_height="255dp" />
 
             <TextView
