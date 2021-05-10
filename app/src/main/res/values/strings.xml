@@ -12,16 +12,16 @@
     <string name="options">options</string>
 
     <string name="ques1">1.) Who are Simple Enemy (in red)?</string>
-    <string name="ans1">-> Simple Enemy are the one that caveman can kill using the axe.</string>
+    <string name="ans1">\t\t\t Simple Enemy are the one that caveman can kill using the axe.</string>
     <string name="ques2">2.) Who are Jumping Enemy (in black)?</string>
-    <string name="ans2">-> Jumping Enemy are the one that caveman cannot kill using the axe.</string>
+    <string name="ans2">\t\t\t Jumping Enemy are the one that caveman cannot kill using the axe.</string>
     <string name="ques3">3.) How to play game?</string>
-    <string name="ans3">-> The game is very simple. Basically, when we select the level, we are directed to the corresponding level. Now the axe is with caveman, and with the use of axe, we need to kill the simple enemy (in red color). The player just need to touh the top of caveman and drag the axe towards the enemy, and as the axe touches the Simple Enemy, the got killed and score increases respectively.</string>
+    <string name="ans3">\t\t\t The game is very simple. Basically, when we select the level, we are directed to the corresponding level. Now the axe is with caveman, and with the use of axe, we need to kill the simple enemy (in red color). The player just need to touh the top of caveman and drag the axe towards the enemy, and as the axe touches the Simple Enemy, the got killed and score increases respectively.</string>
     <string name="ques4">4.) Where is the Level Score visible?</string>
-    <string name="ans4">-> The Level Score is visible at the top left corner for each level.</string>
+    <string name="ans4">\t\t\t The Level Score is visible at the top left corner for each level.</string>
     <string name="ques5">5.) How much points we get on killing a Simple Enemy?</string>
-    <string name="ans5">-> Killing one simple gives you 10 extra points.</string>
+    <string name="ans5">\t\t\t Killing one simple gives you 10 extra points.</string>
     <string name="ques6">6.) What to do when particular level finishes?</string>
-    <string name="ans6">-> The message of GAME OVER! will be visible on screen when particular level finishes, If you want to play next level , touch anywhere on the screen. else press the back key and you will be directed to the menu page.</string>
-    <string name="end">********** PLAY AND ENJOY **********</string>
+    <string name="ans6">\t\t\t The message of GAME OVER! will be visible on screen when particular level finishes, If you want to play next level , touch anywhere on the screen. else press the back key and you will be directed to the menu page.</string>
+    <string name="end">---        PLAY AND ENJOY        ---</string>
 </resources>
