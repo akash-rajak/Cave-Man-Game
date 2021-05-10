@@ -8,7 +8,9 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.MediaController;
 import android.widget.ToggleButton;
+import android.widget.VideoView;
 
 public class HelpActivity extends Activity {
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
@@ -46,6 +48,17 @@ public class HelpActivity extends Activity {
 				}
 			}
 		});
+
+		VideoView videoView;//Initialize the variable
+		videoView = findViewById(R.id.videoView);// Assigning the variable
+
+		videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.demo);
+		MediaController mediaController = new MediaController(this);
+		mediaController.setAnchorView(videoView);
+		// set the mediacontroller with videoview object
+		videoView.setMediaController(mediaController);
+
+
 
 	}
 
