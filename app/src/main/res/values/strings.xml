@@ -23,5 +23,5 @@
     <string name="ans5">\t\t\t Killing each Red Enemy gives player 10 extra points.</string>
     <string name="ques6">6.) What to do when particular level finishes?</string>
     <string name="ans6">\t\t\t The message of GAME OVER! will be visible on screen when particular level finishes, If player want to play next level, need to touch anywhere on the screen. Otherwise pressing the back key and player will be directed to the MENU page.</string>
-    <string name="end">---        PLAY AND ENJOY        ---</string>
+    <string name="end">--- PLAY N\' ENJOY ---</string>
 </resources>
