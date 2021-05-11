@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, Caveman!</string>
-    <string name="app_name">Cave</string>
+    <string name="app_name">Cave Saviour</string>
     <string name="splash_screen">SplashScreen</string>
     <string name="highscores">highscores</string>
     <string name="credits_1">Akash</string>
