@@ -67,17 +67,27 @@ public class OptionsActivity extends Activity implements AnimationListener {
 			public void onClick(View v) {
 				String s = String.valueOf(ratingBar.getRating());
 				Toast toast;
-				if(s.equals("0.0"))
+				if(s.equals("0.0")){
 					toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE44 Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
-				else if(s.equals("5.0"))
+					TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+					toastMessage.setTextSize(30);
+					toastMessage.setTextColor(Color.GREEN);
+				}
+				else if(s.equals("5.0")){
 					toast = Toast.makeText(getApplicationContext(),"\uD83E\uDD29 Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
-				else
+					TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+					toastMessage.setTextSize(30);
+					toastMessage.setTextColor(Color.RED);
+				}
+				else{
 					toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0A Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
+					TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+					toastMessage.setTextSize(30);
+					toastMessage.setTextColor(Color.YELLOW);
+				}
 				View view = toast.getView();
 				view.setBackgroundColor(Color.BLACK);
-				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-				toastMessage.setTextSize(30);
-				toastMessage.setTextColor(Color.RED);
+
 				toast.show();
 			}
 		});
