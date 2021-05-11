@@ -4,11 +4,9 @@
     <string name="app_name">Cave Saviour</string>
     <string name="splash_screen">SplashScreen</string>
     <string name="highscores">highscores</string>
-    <string name="credits_1">Akash</string>
-    <string name="credits_2">Hritam</string>
-    <!--
-    <string name="credits_3">Music and sound effects by Both</string>
-    -->
+    <string name="credits_1">Akash Rajak</string>
+    <string name="credits_2">Contact Me : +91 8980153352</string>
+    <string name="credits_3">Email Id : aakashrajak02@gmail.com</string>
     <string name="options">options</string>
 
     <string name="ques1">1.) Who are the Enemies in red ?</string>
