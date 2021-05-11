@@ -87,7 +87,6 @@ public class OptionsActivity extends Activity implements AnimationListener {
 				}
 				View view = toast.getView();
 				view.setBackgroundColor(Color.BLACK);
-
 				toast.show();
 			}
 		});
