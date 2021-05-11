@@ -4,6 +4,7 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -13,6 +14,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.RatingBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -64,7 +66,19 @@ public class OptionsActivity extends Activity implements AnimationListener {
 			@Override
 			public void onClick(View v) {
 				String s = String.valueOf(ratingBar.getRating());
-				Toast.makeText(getApplicationContext(),"Rated : " + s + " STAR ",Toast.LENGTH_SHORT).show();
+				Toast toast;
+				if(s.equals("0.0"))
+					toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE44 Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
+				else if(s.equals("5.0"))
+					toast = Toast.makeText(getApplicationContext(),"\uD83E\uDD29 Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
+				else
+					toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0A Rated : " + s + " STAR ",Toast.LENGTH_SHORT);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.RED);
+				toast.show();
 			}
 		});
 
