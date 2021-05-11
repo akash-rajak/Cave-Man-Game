@@ -11,17 +11,17 @@
     -->
     <string name="options">options</string>
 
-    <string name="ques1">1.) Who are Simple Enemy (in red)?</string>
-    <string name="ans1">\t\t\t Simple Enemy are the one that caveman can kill using the axe.</string>
-    <string name="ques2">2.) Who are Jumping Enemy (in black)?</string>
-    <string name="ans2">\t\t\t Jumping Enemy are the one that caveman cannot kill using the axe.</string>
-    <string name="ques3">3.) How to play game?</string>
-    <string name="ans3">\t\t\t The game is very simple. Basically, when we select the level, we are directed to the corresponding level. Now the axe is with caveman, and with the use of axe, we need to kill the simple enemy (in red color). The player just need to touch the top of caveman and drag the axe towards the enemy, and as the axe touches the Simple Enemy, the got killed and score increases respectively.</string>
-    <string name="ques4">4.) Where is the Level Score visible?</string>
+    <string name="ques1">1.) Who are the Enemies in red ?</string>
+    <string name="ans1">\t\t\t Red Enemies are enemies of less strength and Cave Man can kill them with the axe(Cave Man Weapon).</string>
+    <string name="ques2">2.) Who are the Enemies in black ?</string>
+    <string name="ans2">\t\t\t Black Enemies are enemies of more strength and Cave Man is not able to kill them with the axe.</string>
+    <string name="ques3">3.) How to play game ?</string>
+    <string name="ans3">\t\t\t The game is simple and above the FAQs given a demo video of playing the game. Firstly player need to select the game level, and then he will be directed to the corresponding level. Now the axe is with CAVE MAN sitting on the tree, and with the use of axe, he need to kill the enemies in red. The player need to touch the top of caveman and drag the axe towards the enemies coming from right side, and as the axe touches the Red Enemies, they got killed and score increases respectively. The axe just pass through the Black Enemies without killing them. As the first enemy touches the left of the game screen, the GAME OVER! message will be displayed indicating that level is over.</string>
+    <string name="ques4">4.) Where is the Level Score visible ?</string>
     <string name="ans4">\t\t\t The Level Score is visible at the top left corner for each level.</string>
-    <string name="ques5">5.) How much points we get on killing a Simple Enemy?</string>
-    <string name="ans5">\t\t\t Killing one simple gives you 10 extra points.</string>
+    <string name="ques5">5.) How much points does player gets on killing each Red Enemy ?</string>
+    <string name="ans5">\t\t\t Killing each Red Enemy gives player 10 extra points.</string>
     <string name="ques6">6.) What to do when particular level finishes?</string>
-    <string name="ans6">\t\t\t The message of GAME OVER! will be visible on screen when particular level finishes, If you want to play next level , touch anywhere on the screen. else press the back key and you will be directed to the menu page.</string>
+    <string name="ans6">\t\t\t The message of GAME OVER! will be visible on screen when particular level finishes, If player want to play next level, need to touch anywhere on the screen. Otherwise pressing the back key and player will be directed to the MENU page.</string>
     <string name="end">---        PLAY AND ENJOY        ---</string>
 </resources>
