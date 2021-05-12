@@ -28,7 +28,7 @@ public class ScoreDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // SQL statement that will generate SQLite table
-        String createTableStatement= "CREATE TABLE " + PLAYER_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_LEVEL + " INT, " + COLUMN_PLAYER_SCORE + " INT)";
+        String createTableStatement= "CREATE TABLE " + PLAYER_TABLE + " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_PLAYER_LEVEL + " INT, " + COLUMN_PLAYER_SCORE + " STRING)";
         db.execSQL(createTableStatement);// db comes from parameter we are passing int he onCreate function
     }
 
@@ -79,7 +79,7 @@ public class ScoreDB extends SQLiteOpenHelper {
             do{
                 int playerID = cursor.getInt(0);
                 int playerLevel = cursor.getInt(1);
-                int playerScore = cursor.getInt(2);
+                String playerScore = cursor.getString(2);
                 PlayerModel newPlayer = new PlayerModel(playerID,playerLevel,playerScore);
                 returnList.add(newPlayer);
             }while(cursor.moveToNext());

@@ -4,10 +4,10 @@ public class PlayerModel {
     // created three variable required
     private int id;
     private int level_no;
-    private int player_score;
+    private String player_score;
 
     //created parametrized constructor
-    public PlayerModel(int id,int level_no, int player_score) {
+    public PlayerModel(int id,int level_no, String player_score) {
         this.id = id;
         this.level_no = level_no;
         this.player_score = player_score;
@@ -21,7 +21,7 @@ public class PlayerModel {
     //created toString method
     @Override
     public String toString() {
-        return "Player No. : " + id + "      |      Level No. : " + level_no + "      |      Score : " + player_score;
+        return "Player No. : " + id + "      |      Level No. : " + level_no + "      |      Status : " + player_score;
     }
 
     //created getter and setter for three variables
@@ -41,11 +41,11 @@ public class PlayerModel {
         this.level_no = level_no;
     }
 
-    public int getPlayer_score() {
+    public String getPlayer_score() {
         return player_score;
     }
 
-    public void setPlayer_score(int player_score) {
+    public void setPlayer_score(String player_score) {
         this.player_score = player_score;
     }
 }

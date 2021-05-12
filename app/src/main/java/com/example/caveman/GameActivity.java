@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class GameActivity extends Activity {
 	private com.example.caveman.UserInteract userInter;// The Canvas layer of the game
 	private com.example.caveman.GameView surface;// The OpenGL ES layer of the game
@@ -37,6 +39,15 @@ public class GameActivity extends Activity {
 		}
 		mp = MediaPlayer.create(getApplicationContext(), R.raw.music1);
 		mp.start();
+	}
+
+	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+	public static int getRandomValue(int Min, int Max)
+	{
+
+		// Get and return the random integer
+		// within Min and Max
+		return ThreadLocalRandom.current().nextInt(Min, Max + 1);
 	}
 
 	// This function called when the activity is first created. -----------------------------------------------------
@@ -62,16 +73,64 @@ public class GameActivity extends Activity {
 
 		//------------------------------------------------------------------------------------------
 
-		int score = 70;
+		int score = getRandomValue(0,200);
+//		if(score>0 && score<=10)
+//			score = 10;
+//		else if(score<=20)
+//			score = 20;
+//		else if(score<=30)
+//			score = 30;
+//		else if(score<=40)
+//			score = 40;
+//		else if(score<=50)
+//			score = 50;
+//		else if(score<=60)
+//			score = 60;
+//		else if(score<=70)
+//			score = 70;
+//		else if(score<=80)
+//			score = 80;
+//		else if(score<=90)
+//			score = 90;
+//		else if(score<=100)
+//			score = 100;
+//		else if(score<=110)
+//			score = 110;
+//		else if(score<=120)
+//			score = 120;
+//		else if(score<=130)
+//			score = 130;
+//		else if(score<=140)
+//			score = 140;
+//		else if(score<=150)
+//			score = 150;
+//		else if(score<=160)
+//			score = 160;
+//		else if(score<=170)
+//			score = 170;
+//		else if(score<=180)
+//			score = 180;
+//		else if(score<=190)
+//			score = 190;
+//		else if(score<=200)
+//			score = 200;
+
+
+		String status;
+		if(score<60)
+			status = "LOSE";
+		else
+			status = "WIN";
+
 		PlayerModel playerModel;
 		try{
-			playerModel = new PlayerModel(-1,Integer.parseInt(level),score);
+			playerModel = new PlayerModel(-1,Integer.parseInt(level),status);
 			//Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();// toast message is shown on screen
 		}
 		catch(Exception e){
 			// if this fails
 			Toast.makeText(GameActivity.this,"Error",Toast.LENGTH_SHORT).show();
-			playerModel = new PlayerModel(-1,-1, 0);
+			playerModel = new PlayerModel(-1,-1, null);
 		}
 
 		ScoreDB scoredb = new ScoreDB(GameActivity.this);
