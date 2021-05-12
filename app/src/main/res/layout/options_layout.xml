@@ -51,7 +51,7 @@
         android:layout_marginLeft="280dip"
         android:layout_marginRight="190dip"
         android:background="@layout/ratebutton_layout"
-        android:soundEffectsEnabled="false" />
+        android:soundEffectsEnabled="true" />
 
     <ToggleButton
         android:id="@+id/toggle1"

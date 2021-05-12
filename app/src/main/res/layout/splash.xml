@@ -4,6 +4,7 @@
   android:layout_width="fill_parent"
   android:layout_height="fill_parent"
   android:background="@drawable/splash_background">
+    <!--
     <ImageView
         android:id="@+id/credits"
         android:src="@drawable/start1"
@@ -15,5 +16,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@null" />
+      -->
+    <Button
+        android:id="@+id/Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dip"
+        android:layout_marginBottom="40dip"
+        android:layout_marginLeft="280dip"
+        android:layout_marginRight="100dip"
+        android:background="@layout/welcomebutton_layout"
+        android:soundEffectsEnabled="true" />
 
 </LinearLayout>
