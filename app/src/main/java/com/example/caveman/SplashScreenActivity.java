@@ -3,10 +3,17 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class SplashScreenActivity extends Activity {
 	protected volatile boolean active = true;//Holds the state of the splash screen, wheteher its active or not
@@ -27,15 +34,45 @@ public class SplashScreenActivity extends Activity {
 		mp.start();
 	}
 
+	Button welcomebutton;
+	private void createwelcomeButtons() {
+		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
+
+		// for GameButton ----------------------
+		welcomebutton = (Button) findViewById(R.id.Welcome);
+		welcomebutton.startAnimation(AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.blink));
+		welcomebutton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				clickSound();
+				welcomebutton.startAnimation(animation1);
+				animation1.setAnimationListener((Animation.AnimationListener) SplashScreenActivity.this);
+			}
+		});
+	}
+
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
+		createwelcomeButtons();
 
 		//Toast.makeText(SplashScreenActivity.this,"Firebase Connection Success",Toast.LENGTH_LONG).show();
-
 		clickSound();
+
+		welcomebutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast toast;
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.RED);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				toast.show();
+			}
+		});
 		// thread for displaying the splash screen
 		splashThread = new Thread() {
 			@Override
