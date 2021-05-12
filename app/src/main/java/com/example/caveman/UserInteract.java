@@ -59,7 +59,7 @@ public class UserInteract extends View implements OnTouchListener {
 
 		pipe = com.example.caveman.Pipe.getPipe();
 
-		paint.setColor(Color.BLUE);
+		paint.setColor(Color.YELLOW);
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setStrokeWidth(4);
 		pipe.setWeaponCondition(false);
@@ -71,7 +71,14 @@ public class UserInteract extends View implements OnTouchListener {
 	private void drawScore(Canvas canvas) {
 		paint.setAntiAlias(true);
 		paint.setTextSize(50);
-		canvas.drawText("LEVEL SCORE : " + pipe.getScore(), 40, 80, paint);
+		canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore(), 40, 80, paint);
+
+		if(pipe.getScore()>=60)
+			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 700, 200, paint);
+		else
+			canvas.drawText("\uD83E\uDDFF STATUS : YOU LOSE \uD83D\uDE44", 40, 200, paint);
+
+		canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 60, 700, 80, paint);
 	}
 
 	// Clears the values stored in the ArrayList of the Pipe
