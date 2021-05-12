@@ -14,30 +14,34 @@
         android:layout_height="fill_parent"
           android:contentDescription="@null" />
 
+	<!--
+	android:layout_centerInParent="true"
+
+	-->
 	  <ViewFlipper android:id="@+id/flipper"
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
     	android:flipInterval="2000"
+		  android:layout_marginTop="100dip"
     	android:layout_marginBottom="20dip" >
 
-          <TextView
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center_vertical|center_horizontal"
-              android:text="@string/credits_1"
-              android:textColor="#E040FB"
-              android:textSize="54sp"
-              android:textStyle="bold" />
+		  <TextView
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content"
+			  android:gravity="center_vertical|center_horizontal"
+			  android:text="@string/credits_1"
+			  android:textColor="#D50000"
+			  android:textSize="54sp"
+			  android:textStyle="bold" />
 
-          <TextView
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:gravity="center_vertical|center_horizontal"
-              android:text="@string/credits_2"
-              android:textColor="#7C4DFF"
-              android:textSize="36sp"
-              android:textStyle="bold" />
+		  <TextView
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content"
+			  android:gravity="center_vertical|center_horizontal"
+			  android:text="@string/credits_2"
+			  android:textColor="#FF6D00"
+			  android:textSize="36sp"
+			  android:textStyle="bold" />
           <TextView
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
@@ -73,5 +77,16 @@
 		android:textSize="24sp"
 		android:textStyle="bold"
 		tools:visibility="invisible" />
+
+	<TextView
+		android:id="@+id/textView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="200dip"
+		android:text="@string/text"
+		android:textColor="#64DD17"
+		android:textSize="34sp"
+		android:textStyle="italic" />
 
 </RelativeLayout>
