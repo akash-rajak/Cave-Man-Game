@@ -10,7 +10,7 @@
 ****
 # ✔ Screenshots :
 <p align="center">
-  <img src="images/1.jpg" /><br>
+  <img height = 500 width = 500 src="images/1.jpg" /><br>
   <img src="images/2.jpg" /><br>
   <img src="images/3.jpg" /><br>
   <img src="images/4.jpg" /><br>
