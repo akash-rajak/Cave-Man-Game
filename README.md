@@ -25,4 +25,6 @@
   <img src="images/15.jpg" />
   <img src="images/16.jpg" />
   <img src="images/17.jpg" />
+  <img src="images/18.jpg" />
+  <img src="images/19.jpg" />
 </p>
