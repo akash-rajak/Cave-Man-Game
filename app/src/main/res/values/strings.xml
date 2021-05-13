@@ -11,26 +11,26 @@
     <string name="text"><a href = "https://github.com/akash435/Cave-Man-Game">Github Code link</a></string>
 
     <string name="ques1">🤔\t Who is Cave Man ?</string>
-    <string name="ans1">\t\t\t Cave Man is the saviour of cave. He will be found sitting on tree on PLay Screen and will be able to kill the Red enemies through axe (his weapon).</string>
+    <string name="ans1">\t\t\t📌 Cave Man is the saviour of cave. He will be found sitting on tree on PLay Screen and will be able to kill the Red enemies through axe (his weapon).</string>
     <string name="ques2">🤔\t Who are the Enemies in red ?</string>
-    <string name="ans2">\t\t\t Red Enemies are enemies of less strength and Cave Man can kill them with his axe.</string>
+    <string name="ans2">\t\t\t📌 Red Enemies are enemies of less strength and Cave Man can kill them with his axe.</string>
     <string name="ques3">🤔\t Who are the Enemies in black ?</string>
-    <string name="ans3">\t\t\t Black Enemies are enemies of more strength and Cave Man is not able to kill them with his axe.</string>
+    <string name="ans3">\t\t\t📌 Black Enemies are enemies of more strength and Cave Man is not able to kill them with his axe.</string>
     <string name="ques4">🤔\t How to play game ?</string>
-    <string name="ans4">\t\t\t The game is simple and above the FAQs given a demo video of playing the game. Firstly, player need to select the game level, and then he will be directed to the corresponding level. Now the axe is with CAVE MAN sitting on the tree, and with the use of axe, he need to kill the enemies in red. The player need to touch the top of caveman and drag the axe towards the enemies coming from right side, and as the axe touches the Red Enemies, they got killed and score increases respectively. The axe just pass through the Black Enemies without killing them. As the first enemy touches the left of the game screen, the GAME OVER! message will be displayed indicating that level is over.</string>
+    <string name="ans4">\t\t\t📌 The game is simple and above the FAQs given a demo video of playing the game. Firstly, player need to select the game level, and then he will be directed to the corresponding level. Now the axe is with CAVE MAN sitting on the tree, and with the use of axe, he need to kill the enemies in red. The player need to touch the top of caveman and drag the axe towards the enemies coming from right side, and as the axe touches the Red Enemies, they got killed and score increases respectively. The axe just pass through the Black Enemies without killing them. As the first enemy touches the left of the game screen, the GAME OVER! message will be displayed indicating that level is over.</string>
     <string name="ques5">🤔\t What is Level Score ?</string>
-    <string name="ans5">\t\t\t The Level Score is visible at the top left corner for each level.</string>
+    <string name="ans5">\t\t\t📌 The Level Score is visible at the top left corner for each level.</string>
     <string name="ques6">🤔\t What is Winning Score ?</string>
-    <string name="ans6">\t\t\t The Winning Score is the minimum score player has to score to win the particular level.</string>
+    <string name="ans6">\t\t\t📌 The Winning Score is the minimum score player has to score to win the particular level.</string>
     <string name="ques7">🤔\t What is Status ?</string>
-    <string name="ans7">\t\t\t Status decribes whether player has won or not. If the Level Score is less than Winning Score, Status will be "YOU LOSE", Otherwise the Status will be "YOU WON".</string>
+    <string name="ans7">\t\t\t📌 Status describes whether player has won or not. If the Level Score is less than Winning Score, Status will be "YOU LOSE", Otherwise the Status will be "YOU WON".</string>
     <string name="ques8">🤔\t How much points does player gets on killing each Red Enemy ?</string>
-    <string name="ans8">\t\t\t On killing each Red Enemy, player gets 10 points.</string>
+    <string name="ans8">\t\t\t📌 On killing each Red Enemy, player gets 10 points.</string>
     <string name="ques9">🤔\t When will the "GAME OVER!" message will be displayed ?</string>
-    <string name="ans9">\t\t\t The GAME OVER! message will be displayed on screen when particular level finishes. At this point, If player want to play next level, need to touch anywhere on the screen. Otherwise pressing the back key and player will be directed to the MENU page.</string>
+    <string name="ans9">\t\t\t📌 The GAME OVER! message will be displayed on screen when particular level finishes. At this point, If player want to play next level, need to touch anywhere on the screen. Otherwise pressing the back key and player will be directed to the MENU page.</string>
     <string name="ques10">🤔\t What is there in Option button of MENU page ?</string>
-    <string name="ans10">\t\t\t On clicking on Option button, player gets the chance to rate the game among five stars.</string>
+    <string name="ans10">\t\t\t📌 On clicking on Option button, player gets the chance to rate the game among five stars.</string>
     <string name="ques11">🤔\t Where player can find the contact information of game developer ?</string>
-    <string name="ans11">\t\t\t On Clicking on credits button, Player will be able to see the contact information.</string>
+    <string name="ans11">\t\t\t📌 On Clicking on credits button, Player will be able to see the contact information.</string>
     <string name="end">--- PLAY N\' ENJOY ---</string>
 </resources>
