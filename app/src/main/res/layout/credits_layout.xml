@@ -31,7 +31,7 @@
 			  android:gravity="center_vertical|center_horizontal"
 			  android:text="@string/credits_1"
 			  android:textColor="#D50000"
-			  android:textSize="54sp"
+			  android:textSize="36sp"
 			  android:textStyle="bold" />
 
 		  <TextView
@@ -83,7 +83,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
-		android:layout_marginTop="200dip"
+		android:layout_marginTop="160dip"
 		android:text="@string/text"
 		android:textColor="#64DD17"
 		android:textSize="34sp"
