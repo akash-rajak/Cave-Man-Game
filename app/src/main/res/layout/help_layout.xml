@@ -35,6 +35,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_centerInParent="true"
+                android:layout_height="255dp" />
+            -->
             <VideoView
                 android:id="@+id/videoView"
                 android:layout_width="match_parent"
