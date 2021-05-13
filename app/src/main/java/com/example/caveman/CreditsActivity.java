@@ -4,12 +4,15 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.ViewFlipper;
 
@@ -27,6 +30,8 @@ public class CreditsActivity extends Activity {
 	private ViewFlipper mFlipper;//A flipper to switch between the credits
 
 	ToggleButton togglebutton;// a togglebutton variable
+	Button goodbutton;
+	Button badbutton;
 
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
@@ -56,6 +61,36 @@ public class CreditsActivity extends Activity {
 
 		TextView textView = (TextView)findViewById(R.id.textView);
 		textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+		goodbutton = findViewById(R.id.Good);
+		goodbutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast toast;
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDCCC Thanks for the Feedback. We are glad that you have positive experience with game.",Toast.LENGTH_SHORT);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.GREEN);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				toast.show();
+			}
+		});
+
+		badbutton = findViewById(R.id.Bad);
+		badbutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast toast;
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDCCC Thanks for the Feedback. We are sorry that you are having problem with game, Please give detailed feedback on Play Store review..",Toast.LENGTH_SHORT);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.GREEN);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				toast.show();
+			}
+		});
 
 	}
 
