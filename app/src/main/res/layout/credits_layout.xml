@@ -30,7 +30,7 @@
 			  android:layout_height="wrap_content"
 			  android:gravity="center_vertical|center_horizontal"
 			  android:text="@string/credits_1"
-			  android:textColor="#D50000"
+			  android:textColor="#000000"
 			  android:textSize="36sp"
 			  android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
 			  android:layout_height="wrap_content"
 			  android:gravity="center_vertical|center_horizontal"
 			  android:text="@string/credits_2"
-			  android:textColor="#FF6D00"
+			  android:textColor="#000000"
 			  android:textSize="36sp"
 			  android:textStyle="bold" />
           <TextView
@@ -47,7 +47,7 @@
               android:layout_height="wrap_content"
               android:gravity="center_vertical|center_horizontal"
               android:text="@string/credits_3"
-              android:textColor="#FFFF00"
+              android:textColor="#000000"
               android:textSize="36sp"
               android:textStyle="bold" />
 
@@ -96,7 +96,7 @@
 		android:layout_marginLeft="80dip"
 		android:layout_marginTop="240dip"
 		android:text="@string/feedback"
-		android:textColor="#FF6D00"
+		android:textColor="#FFFFFF"
 		android:textSize="54sp"
 		android:textStyle="bold" />
 

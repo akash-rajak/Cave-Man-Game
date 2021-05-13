@@ -39,19 +39,18 @@
                 android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dip"
-                android:layout_marginLeft="30dip"
+                android:layout_marginLeft="80dip"
                 android:layout_marginRight="30dip"
-                android:layout_centerInParent="true"
                 android:layout_height="255dp" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques1"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -65,14 +64,15 @@
                 android:textColor="#18FFFF"
                 android:textSize="24sp"
                 android:textStyle="italic" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques2"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -90,11 +90,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques3"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -112,11 +112,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques4"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -134,11 +134,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques5"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -156,11 +156,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques6"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -178,11 +178,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques7"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -200,11 +200,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques8"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -222,11 +222,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques9"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -244,11 +244,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques10"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -266,11 +266,11 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
                 android:layout_marginLeft="30dip"
+                android:layout_marginTop="15dip"
                 android:layout_marginRight="30dip"
                 android:text="@string/ques11"
-                android:textColor="#E040FB"
+                android:textColor="#C51162"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
