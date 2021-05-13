@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dip"
-        android:layout_marginLeft="180dip"
+        android:layout_centerHorizontal="true"
         android:numStars="5"
         android:stepSize="0.2" />
 
@@ -48,8 +48,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="220dip"
         android:layout_marginBottom="80dip"
-        android:layout_marginLeft="280dip"
-        android:layout_marginRight="190dip"
+        android:layout_marginLeft="200dip"
+        android:layout_marginRight="200dip"
         android:background="@layout/ratebutton_layout"
         android:soundEffectsEnabled="true" />
 
