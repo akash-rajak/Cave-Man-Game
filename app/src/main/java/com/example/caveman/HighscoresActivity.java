@@ -110,8 +110,8 @@ public class HighscoresActivity extends Activity {
 					MainActivity.class);
 			startActivity(Menu);
 			finish();
-			mp.stop();
-			mp.release();
+//			mp.stop();// when backkey is pressed , the music stopped
+//			mp.release();// and also music is released
 			return true;
 		}
 

@@ -101,8 +101,8 @@ public class CreditsActivity extends Activity {
 			Intent Menu = new Intent(CreditsActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-			mp.stop();// when backkey is pressed , the music stopped
-			mp.release();// and also music is released
+//			mp.stop();// when backkey is pressed , the music stopped
+//			mp.release();// and also music is released
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
