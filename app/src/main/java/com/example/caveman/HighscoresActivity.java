@@ -70,7 +70,7 @@ public class HighscoresActivity extends Activity {
 			public void onClick(View v) {
 				if(togglebutton.isChecked()){
 					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
-					mp = MediaPlayer.create(getApplicationContext(), R.raw.demons);
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.bstd);
 					mp.start();
 				}
 				else{
@@ -110,8 +110,8 @@ public class HighscoresActivity extends Activity {
 					MainActivity.class);
 			startActivity(Menu);
 			finish();
-//			mp.stop();
-//			mp.release();
+			mp.stop();
+			mp.release();
 			return true;
 		}
 

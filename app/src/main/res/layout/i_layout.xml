@@ -106,7 +106,7 @@
     </ScrollView>
 
     <ToggleButton
-        android:id="@+id/toggle3"
+        android:id="@+id/toggle5"
         android:layout_width="80dp"
         android:layout_height="60dp"
         android:layout_marginLeft="500dip"

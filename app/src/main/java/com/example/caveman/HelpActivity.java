@@ -38,7 +38,7 @@ public class HelpActivity extends Activity {
 			public void onClick(View v) {
 				if(togglebutton.isChecked()){
 					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
-					mp = MediaPlayer.create(getApplicationContext(), R.raw.casle_of_glass);
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.bstd);
 					mp.start();
 				}
 				else{
@@ -70,8 +70,8 @@ public class HelpActivity extends Activity {
 			Intent Menu = new Intent(HelpActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-//			mp.stop();
-//			mp.release();
+			mp.stop();
+			mp.release();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);

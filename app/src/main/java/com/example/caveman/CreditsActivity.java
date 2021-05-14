@@ -48,7 +48,7 @@ public class CreditsActivity extends Activity {
 			public void onClick(View v) {
 				if(togglebutton.isChecked()){
 					//Toast.makeText(OptionsActivity.this,"On", Toast.LENGTH_SHORT).show();
-					mp = MediaPlayer.create(getApplicationContext(), R.raw.final_masquerade);
+					mp = MediaPlayer.create(getApplicationContext(), R.raw.bstd);
 					mp.start();
 				}
 				else{
@@ -101,8 +101,8 @@ public class CreditsActivity extends Activity {
 			Intent Menu = new Intent(CreditsActivity.this, MainActivity.class);
 			startActivity(Menu);
 			finish();
-//			mp.stop();// when backkey is pressed , the music stopped
-//			mp.release();// and also music is released
+			mp.stop();// when backkey is pressed , the music stopped
+			mp.release();// and also music is released
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
