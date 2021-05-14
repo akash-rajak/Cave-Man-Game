@@ -35,7 +35,7 @@ public class MainActivity extends Activity implements AnimationListener {
 	}
 
 	// Boolean Array of size 5 is created to check if button is selected or not
-	private final boolean[] selected = new boolean[5];
+	private final boolean[] selected = new boolean[6];
 
 	// CreateMenuButtons() function, creates an short animation when a particular menu button is selected ------------------
 	private void createMenuButtons() {
@@ -65,19 +65,6 @@ public class MainActivity extends Activity implements AnimationListener {
 				animation1.setAnimationListener(MainActivity.this);
 			}
 		});
-
-//		// for HighscoresButton ----------------------
-//		HighscoresButton = (Button) findViewById(R.id.Highscores);
-//		HighscoresButton.startAnimation(AnimationUtils.loadAnimation(
-//				MainActivity.this, R.anim.slide_down));
-//		HighscoresButton.setOnClickListener(new OnClickListener() {
-//			public void onClick(View v) {
-//				clickSound();
-//				selected[2] = true;
-//				HighscoresButton.startAnimation(animation1);
-//				animation1.setAnimationListener(MainActivity.this);
-//			}
-//		});
 
 		// for iButton ----------------------
 		IButton = (Button) findViewById(R.id.i_about);
@@ -117,6 +104,20 @@ public class MainActivity extends Activity implements AnimationListener {
 				animation1.setAnimationListener(MainActivity.this);
 			}
 		});
+
+		// for HighscoresButton ----------------------
+		HighscoresButton = (Button) findViewById(R.id.Highscores);
+		HighscoresButton.startAnimation(AnimationUtils.loadAnimation(
+				MainActivity.this, R.anim.slide_down));
+		HighscoresButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				clickSound();
+				selected[5] = true;
+				HighscoresButton.startAnimation(animation1);
+				animation1.setAnimationListener(MainActivity.this);
+			}
+		});
+
 	}
 
 	//this functions are used for animation part only ---------------------------------------------------------
@@ -137,7 +138,7 @@ public class MainActivity extends Activity implements AnimationListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_layout);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 6; i++)
 			selected[i] = false;// we here initialize all the boolean array element as false, indicating initially not selected
 		createMenuButtons();// then createMenuButtons() function is called
 	}
@@ -154,7 +155,7 @@ public class MainActivity extends Activity implements AnimationListener {
 
 	// This function detects the button that was clicked and redirects the user to the corresponding Activity.
 	private void switchView() {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 			if (selected[i] == true) {// we change the selected[i] from false to true
 				switch (i) {
 				case 0:// case 0 - for GameButton
@@ -167,15 +168,11 @@ public class MainActivity extends Activity implements AnimationListener {
 							com.example.caveman.OptionsActivity.class);
 					startActivity(Options);
 					break;
-				case 2:// Case 2 - for HighscoresButton
+				case 2:// Case 2 - for aboutButton
 					Intent Iact = new Intent(MainActivity.this,
 							com.example.caveman.IActivity.class);
 					startActivity(Iact);
 					break;
-//					Intent Highscores = new Intent(MainActivity.this,
-//							com.example.caveman.HighscoresActivity.class);
-//					startActivity(Highscores);
-//					break;
 				case 3:// Case 3 - for HelpsButton
 					Intent Help = new Intent(MainActivity.this,
 							com.example.caveman.HelpActivity.class);
@@ -185,6 +182,11 @@ public class MainActivity extends Activity implements AnimationListener {
 					Intent Credits = new Intent(MainActivity.this,
 							com.example.caveman.CreditsActivity.class);
 					startActivity(Credits);
+					break;
+				case 5:// case 5 - for Highsocresbutton
+					Intent Highscores = new Intent(MainActivity.this,
+							com.example.caveman.HighscoresActivity.class);
+					startActivity(Highscores);
 					break;
 				}
 			}

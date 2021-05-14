@@ -29,28 +29,27 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@id/Game"
-        android:layout_marginTop="30dip"
+        android:layout_marginTop="20dip"
         android:background="@layout/optionsbutton_layout"
         android:soundEffectsEnabled="false" />
-      <!--
+
       <Button
         android:id="@+id/Highscores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@id/Options"
-          android:layout_marginTop="30dip"
+          android:layout_marginTop="20dip"
         android:background="@layout/highbutton_layout"
         android:soundEffectsEnabled="false" />
-       -->
 
       <Button
         android:id="@+id/Help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_below="@id/Options"
-          android:layout_marginTop="30dip"
+        android:layout_below="@id/Highscores"
+          android:layout_marginTop="20dip"
         android:background="@layout/helpbutton_layout"
         android:soundEffectsEnabled="false" />
 
@@ -60,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_below="@id/Help"
-          android:layout_marginTop="30dip"
+          android:layout_marginTop="20dip"
         android:background="@layout/creditsbutton_layout"
         android:soundEffectsEnabled="false" />
 
@@ -70,7 +69,7 @@
           android:layout_height="wrap_content"
           android:layout_centerInParent="true"
           android:layout_below="@id/Credits"
-          android:layout_marginTop="30dp"
+          android:layout_marginTop="20dp"
           android:background="@layout/ibutton_layout"
           android:soundEffectsEnabled="false" />
 

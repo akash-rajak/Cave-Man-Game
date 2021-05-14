@@ -16,13 +16,12 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public class GameActivity extends Activity {
 	private com.example.caveman.UserInteract userInter;// The Canvas layer of the game
 	private com.example.caveman.GameView surface;// The OpenGL ES layer of the game
 	private Bundle extras;// A bundle to pass data from an Activity to a View
 	private String level = "1";// the default level is taken as 1, if user doed not select any level
+	private int score = 0;
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	/** Creates a new Pipe object */
@@ -41,14 +40,14 @@ public class GameActivity extends Activity {
 		mp.start();
 	}
 
-	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-	public static int getRandomValue(int Min, int Max)
-	{
-
-		// Get and return the random integer
-		// within Min and Max
-		return ThreadLocalRandom.current().nextInt(Min, Max + 1);
-	}
+//	@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+//	public static int getRandomValue(int Min, int Max)
+//	{
+//
+//		// Get and return the random integer
+//		// within Min and Max
+//		return ThreadLocalRandom.current().nextInt(Min, Max + 1);
+//	}
 
 	// This function called when the activity is first created. -----------------------------------------------------
 	// Creates the layers, passes the level value and basically starts the game.
@@ -66,6 +65,7 @@ public class GameActivity extends Activity {
 		userInter.initActions();
 		extras = this.getIntent().getExtras();
 		level = extras.getString("level");
+		score = extras.getInt("score");
 		surface = new com.example.caveman.GameView(this, height, width, Integer.parseInt(level));
 		setContentView(surface);
 		addContentView(userInter, new LayoutParams(LayoutParams.FILL_PARENT,
@@ -73,7 +73,7 @@ public class GameActivity extends Activity {
 
 		//------------------------------------------------------------------------------------------
 
-		int score = getRandomValue(0,200);
+		//int score = getRandomValue(0,200);
 //		if(score>0 && score<=10)
 //			score = 10;
 //		else if(score<=20)
@@ -115,22 +115,21 @@ public class GameActivity extends Activity {
 //		else if(score<=200)
 //			score = 200;
 
-
-		String status;
-		if(score<60)
-			status = "LOSE";
-		else
-			status = "WIN";
+//		String status;
+//		if(score<60)
+//			status = "LOSE";
+//		else
+//			status = "WIN";
 
 		PlayerModel playerModel;
 		try{
-			playerModel = new PlayerModel(-1,Integer.parseInt(level),status);
+			playerModel = new PlayerModel(-1,Integer.parseInt(level),score);
 			//Toast.makeText(GameActivity.this,"Data inserted",Toast.LENGTH_SHORT).show();// toast message is shown on screen
 		}
 		catch(Exception e){
 			// if this fails
 			Toast.makeText(GameActivity.this,"Error",Toast.LENGTH_SHORT).show();
-			playerModel = new PlayerModel(-1,-1, null);
+			playerModel = new PlayerModel(-1,-1, -1);
 		}
 
 		ScoreDB scoredb = new ScoreDB(GameActivity.this);
