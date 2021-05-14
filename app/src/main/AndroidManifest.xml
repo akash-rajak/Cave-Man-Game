@@ -78,6 +78,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".IActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.IActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 	<!-- The program will not run on any device with android version < 1.6 -->
