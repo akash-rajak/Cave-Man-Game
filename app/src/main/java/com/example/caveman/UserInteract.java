@@ -61,7 +61,7 @@ public class UserInteract extends View implements OnTouchListener {
 
 		paint.setColor(Color.WHITE);
 		paint.setStyle(Paint.Style.STROKE);
-		paint.setStrokeWidth(4);
+		paint.setStrokeWidth(5);
 		pipe.setWeaponCondition(false);
 		pipe.setNextLevel(false);
 		myThread.start();
