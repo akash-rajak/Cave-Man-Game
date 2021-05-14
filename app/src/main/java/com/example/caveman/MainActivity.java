@@ -22,6 +22,7 @@ public class MainActivity extends Activity implements AnimationListener {
 	private Button HighscoresButton;//Creates a new HighscoresButton
 	private Button HelpButton;//Creates a new HelpButton
 	private Button CreditsButton;//Creates a new CreditsButton
+	private Button IButton;//Creates a new IButton
 
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
 	private MediaPlayer mp;//Creates a new MediaPlayer to play any kind of sound
@@ -77,6 +78,19 @@ public class MainActivity extends Activity implements AnimationListener {
 //				animation1.setAnimationListener(MainActivity.this);
 //			}
 //		});
+
+		// for iButton ----------------------
+		IButton = (Button) findViewById(R.id.i_about);
+		IButton.startAnimation(AnimationUtils.loadAnimation(
+				MainActivity.this, R.anim.slide_down));
+		IButton.setOnClickListener(new OnClickListener() {
+			public void onClick(View v) {
+				clickSound();
+				selected[2] = true;
+				IButton.startAnimation(animation1);
+				animation1.setAnimationListener(MainActivity.this);
+			}
+		});
 
 		// for HelpButton ----------------------
 		HelpButton = (Button) findViewById(R.id.Help);
@@ -154,10 +168,14 @@ public class MainActivity extends Activity implements AnimationListener {
 					startActivity(Options);
 					break;
 				case 2:// Case 2 - for HighscoresButton
-					Intent Highscores = new Intent(MainActivity.this,
-							com.example.caveman.HighscoresActivity.class);
-					startActivity(Highscores);
+					Intent Iact = new Intent(MainActivity.this,
+							com.example.caveman.IActivity.class);
+					startActivity(Iact);
 					break;
+//					Intent Highscores = new Intent(MainActivity.this,
+//							com.example.caveman.HighscoresActivity.class);
+//					startActivity(Highscores);
+//					break;
 				case 3:// Case 3 - for HelpsButton
 					Intent Help = new Intent(MainActivity.this,
 							com.example.caveman.HelpActivity.class);
