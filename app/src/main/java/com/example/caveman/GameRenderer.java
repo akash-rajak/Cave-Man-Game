@@ -222,6 +222,15 @@ public class GameRenderer implements Renderer {
 		mp.start();
 	}
 
+	// Method responsible to play a sound each time gameover message displayed.
+	private void GameOverSound() {
+		if (mp != null) {
+			mp.release();
+		}
+		mp = MediaPlayer.create(context.getApplicationContext(), R.raw.gameover_sound_2);
+		mp.start();
+	}
+
 	// Method responsible to move all the enemies on each frame.
 	// It also checks for collisions between the axe and the enemies and if they do collide it
 	// kills (or stops for a while) the correct enemy and reduces the amount of enemies left.
@@ -312,8 +321,10 @@ public class GameRenderer implements Renderer {
 				gl.glPopMatrix();
 			}
 		}
-		if (hasLost)
+		if (hasLost){
+			GameOverSound();
 			drawGameOverScreen();
+		}
 
 	}
 
