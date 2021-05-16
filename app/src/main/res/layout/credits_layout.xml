@@ -98,7 +98,7 @@
 		android:layout_marginLeft="80dip"
 		android:layout_marginTop="240dip"
 		android:text="@string/feedback"
-		android:textColor="#FFFFFF"
+		android:textColor="#FFAB00"
 		android:textSize="54sp"
 		android:textStyle="bold" />
 
