@@ -253,7 +253,7 @@ public class GameRenderer implements Renderer {
 							//enemies.get(i).stopForAWhile();
 							enemies.get(i).die();
 							enemiesLeft--;
-							pipe.setScore(pipe.getScore() - 10);
+							pipe.setScore(pipe.getScore() - 5);
 						}
 						else {
 							killSound();
