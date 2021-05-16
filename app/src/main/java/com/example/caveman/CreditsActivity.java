@@ -11,6 +11,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,21 @@ public class CreditsActivity extends Activity {
 	Button badbutton;
 	Button sharebutton;
 	Button followbutton;
+	Button arrowbutton;
+	private void createarrowButtons() {
+		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
+
+		// for GameButton ----------------------
+		arrowbutton = (Button) findViewById(R.id.arrow_button);
+		arrowbutton.startAnimation(AnimationUtils.loadAnimation(CreditsActivity.this, R.anim.blink));
+		arrowbutton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				//clickSound();
+				arrowbutton.startAnimation(animation1);
+				animation1.setAnimationListener((Animation.AnimationListener) CreditsActivity.this);
+			}
+		});
+	}
 
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
@@ -44,6 +61,7 @@ public class CreditsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		//clickSound();
 		setContentView(R.layout.credits_layout);// content of credits_layout.xml are set, on credits page
+		createarrowButtons();
 		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
 		mFlipper.startFlipping();
 
@@ -61,6 +79,20 @@ public class CreditsActivity extends Activity {
 					mp.release();// and also music is released
 					//Toast.makeText(OptionsActivity.this,"Off", Toast.LENGTH_SHORT).show();
 				}
+			}
+		});
+
+		arrowbutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast toast;
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Follow and Share",Toast.LENGTH_SHORT);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.RED);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				toast.show();
 			}
 		});
 

@@ -94,6 +94,15 @@
 	-->
 
 	<Button
+		android:id="@+id/arrow_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@layout/arrowbutton_layout"
+		android:layout_marginLeft="80dip"
+		android:layout_marginTop="245dip"
+		android:soundEffectsEnabled="false"/>
+
+	<Button
 		android:id="@+id/share_button"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
