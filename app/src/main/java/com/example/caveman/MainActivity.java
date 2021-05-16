@@ -109,18 +109,18 @@ public class MainActivity extends Activity implements AnimationListener {
 			}
 		});
 
-		// for HighscoresButton ----------------------
-		HighscoresButton = (Button) findViewById(R.id.Highscores);
-		HighscoresButton.startAnimation(AnimationUtils.loadAnimation(
-				MainActivity.this, R.anim.slide_down));
-		HighscoresButton.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {
-				clickSound();
-				selected[5] = true;
-				HighscoresButton.startAnimation(animation1);
-				animation1.setAnimationListener(MainActivity.this);
-			}
-		});
+//		// for HighscoresButton ----------------------
+//		HighscoresButton = (Button) findViewById(R.id.Highscores);
+//		HighscoresButton.startAnimation(AnimationUtils.loadAnimation(
+//				MainActivity.this, R.anim.slide_down));
+//		HighscoresButton.setOnClickListener(new OnClickListener() {
+//			public void onClick(View v) {
+//				clickSound();
+//				selected[5] = true;
+//				HighscoresButton.startAnimation(animation1);
+//				animation1.setAnimationListener(MainActivity.this);
+//			}
+//		});
 
 	}
 
