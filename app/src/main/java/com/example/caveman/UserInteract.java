@@ -59,9 +59,9 @@ public class UserInteract extends View implements OnTouchListener {
 
 		pipe = com.example.caveman.Pipe.getPipe();
 
-		paint.setColor(Color.WHITE);
+		paint.setColor(Color.YELLOW);
 		paint.setStyle(Paint.Style.STROKE);
-		paint.setStrokeWidth(5);
+		paint.setStrokeWidth(2);
 		pipe.setWeaponCondition(false);
 		pipe.setNextLevel(false);
 		myThread.start();
@@ -70,15 +70,20 @@ public class UserInteract extends View implements OnTouchListener {
 	// This function draws the score achieved so far
 	private void drawScore(Canvas canvas) {
 		paint.setAntiAlias(true);
-		paint.setTextSize(35);
-		canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore(), 40, 60, paint);
+		paint.setTextSize(40);
+		//canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore() + "  \uD83C\uDFC6 WINNING SCORE : " + 50, 40, 60, paint);
+		canvas.drawText("\uD83D\uDCB0 SCORE : " + pipe.getScore() + " / \uD83C\uDFC6 " + 50, 40, 60, paint);
 
-		if(pipe.getScore()>=50)
-			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 180, paint);
-		else
-			canvas.drawText("\uD83E\uDDFF STATUS : YOU LOSE \uD83D\uDE44", 40, 180, paint);
+		if(pipe.getScore()>=50){
+			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
+			//canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
+		}
+		else{
+			canvas.drawText("\uD83E\uDDFF STATUS : NEED " + (50 - pipe.getScore()) + " POINTS \uD83D\uDE44", 40, 120, paint);
+			//canvas.drawText("\uD83E\uDDFF STATUS : YOU NEED " + (50 - pipe.getScore()) + " EXTRA SCORE TO WIN \uD83D\uDE44", 40, 120, paint);
+		}
 
-		canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 50, 40, 120, paint);
+		//canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 50, 40, 120, paint);
 	}
 
 	// Clears the values stored in the ArrayList of the Pipe
