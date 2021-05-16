@@ -73,12 +73,12 @@ public class UserInteract extends View implements OnTouchListener {
 		paint.setTextSize(35);
 		canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore(), 40, 60, paint);
 
-		if(pipe.getScore()>=60)
+		if(pipe.getScore()>=50)
 			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 180, paint);
 		else
 			canvas.drawText("\uD83E\uDDFF STATUS : YOU LOSE \uD83D\uDE44", 40, 180, paint);
 
-		canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 60, 40, 120, paint);
+		canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 50, 40, 120, paint);
 	}
 
 	// Clears the values stored in the ArrayList of the Pipe
