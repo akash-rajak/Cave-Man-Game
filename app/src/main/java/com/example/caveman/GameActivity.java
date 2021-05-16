@@ -4,6 +4,7 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -11,7 +12,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -70,6 +73,16 @@ public class GameActivity extends Activity {
 		setContentView(surface);
 		addContentView(userInter, new LayoutParams(LayoutParams.FILL_PARENT,
 				LayoutParams.FILL_PARENT));
+
+		// toast message to show which level selected
+		Toast toast;
+		toast = Toast.makeText(getApplicationContext(),level,Toast.LENGTH_SHORT);
+		TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+		toastMessage.setTextSize(200);
+		toastMessage.setTextColor(Color.YELLOW);
+		View view = toast.getView();
+		view.setBackgroundColor(Color.TRANSPARENT);
+		toast.show();
 
 		//------------------------------------------------------------------------------------------
 
