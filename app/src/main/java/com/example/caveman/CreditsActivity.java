@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.widget.ViewFlipper;
+
+import androidx.annotation.RequiresApi;
 
 public class CreditsActivity extends Activity {
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
@@ -31,6 +34,7 @@ public class CreditsActivity extends Activity {
 	ToggleButton togglebutton;// a togglebutton variable
 	Button goodbutton;
 	Button badbutton;
+	Button sharebutton;
 
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
@@ -88,6 +92,71 @@ public class CreditsActivity extends Activity {
 				View view = toast.getView();
 				view.setBackgroundColor(Color.BLACK);
 				toast.show();
+			}
+		});
+
+		sharebutton = findViewById(R.id.share_button);
+		sharebutton.setOnClickListener(new View.OnClickListener() {
+			@RequiresApi(api = Build.VERSION_CODES.DONUT)
+			@Override
+			public void onClick(View v) {
+//				Intent intent = new Intent(Intent.ACTION_SEND);
+//				intent.setType("text/plain");
+//				String title = "Game";
+//				String text = "Cave Saviour";
+//				intent.putExtra(Intent.EXTRA_TITLE,title);
+//				intent.putExtra(Intent.EXTRA_TEXT,text);
+//				startActivity(intent.createChooser(intent,"Share Using"));
+
+//				Intent intent = new Intent(Intent.ACTION_SEND);
+//				intent.setType("text/plain");
+//				String title = "Game";
+//				String link = "https://github.com/akash435/Cave-Man-Game";
+//				intent.putExtra(Intent.EXTRA_TITLE,title);
+//				intent.putExtra(Intent.EXTRA_TEXT,link);
+//				startActivity(intent.createChooser(intent,"Share Using"));
+
+				// In this code we need to type the recipient name
+//				Intent intent = new Intent(Intent.ACTION_SEND);
+//				intent.setType("message/rfc822");  //set the email recipient
+//				String recipient = getString(R.string.IntegralEmailAddress);
+//				String subject = "Hello from CaveMan";
+//				intent.putExtra(Intent.EXTRA_EMAIL , recipient);
+//				intent.putExtra(Intent.EXTRA_SUBJECT, subject);// subject of mail will be subject
+//				//let the user choose what email client to use
+//				startActivity(Intent.createChooser(intent, "Send mail using..."));
+
+				// recipient name is already there from code
+//				Intent intent = new Intent(Intent.ACTION_SEND);
+//				intent.setType("text/email");
+//				intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "aakashrajak02@gmail.com" });
+//				intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+//				startActivity(Intent.createChooser(intent, "Send mail to Developer:"));
+
+				// in this only those app will be shown which support email, but we have to enter receiver email
+//				Intent intent = new Intent(Intent.ACTION_SENDTO);
+//				//intent.setType("text/email");
+//				intent.setData(Uri.parse("mailto:"));// this is used to display only those app of email
+//				intent.putExtra(Intent.EXTRA_SUBJECT,"My Subject");
+//				startActivity(Intent.createChooser(intent, "Send mail to Developer:"));
+
+				// shared base.apk but not able to install in mobile
+//				ApplicationInfo app = getApplicationContext().getApplicationInfo();
+//				String filePath = app.publicSourceDir;
+//				Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+//				Uri uri = Uri.parse(filePath);
+//				sharingIntent.setType("*/*");
+//				sharingIntent.putExtra(Intent.EXTRA_STREAM, uri);
+//				sharingIntent.putExtra(Intent.EXTRA_TEXT, "Click to blue link and download thegame. https://drive.google.com/open?id=10Nc5BoYn4NZ_O8ae32UVQwyzdCzFxNy");
+//				startActivity(Intent.createChooser(sharingIntent, "Share app using"));
+
+				Intent intent = new Intent(Intent.ACTION_SEND);
+				intent.setType("text/plain");
+				String title = "Game";
+				String link = "Download My First game (Cave Saviour) through this drive link :- https://drive.google.com/file/d/1GCPOEna6PZN_bzukqUgLcwti1aHzNq2v/view?usp=sharing";
+				intent.putExtra(Intent.EXTRA_TITLE,title);
+				intent.putExtra(Intent.EXTRA_TEXT,link);
+				startActivity(intent.createChooser(intent,"Share Using"));
 			}
 		});
 
