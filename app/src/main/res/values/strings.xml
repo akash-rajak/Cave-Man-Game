@@ -13,8 +13,9 @@
     <string name="game_name">📌 Game Name\t\t\t:\t\t\tCave Saviour</string>
     <string name="game_mode">📌 Game Mode\t\t\t:\t\t\tSingle Player</string>
     <string name="about_game_1">\t\t\t\t\t Cave Saviour is a 2D physics-based game created with simple graphics.</string>
-    <string name="about_game_2">\t\t\t\t\t It is an "Enemy killing" Game, where the core gameplay is based on making weapon to touch the enemy and killing that enemy. Killing an enemy leaves an empty space at its location.</string>
+    <string name="about_game_2">\t\t\t\t\t It is an "Enemy killing" Game, where the core gameplay is based on making weapon to touch the enemy and killing that enemy. Killing an enemy leaves an empty space at its location and player gets plus points or penalty according to which enemy killed.</string>
     <string name="about_game_3">\t\t\t\t\t The game is split in different levels. Each level poses different challenge to the player,such as achieving minimum score and dealing with different clone of enemies.</string>
+    <string name="about_game_4">\t\t\t\t\t The game is based on reaching the winning(maximum) score in each level, and win-lose strategy is staged accordingly.</string>
 
     <string name="demo">🤔\t DEMO VIDEO 👇🏿</string>
     <string name="ques1">🤔\t Who is Cave Man ?</string>
