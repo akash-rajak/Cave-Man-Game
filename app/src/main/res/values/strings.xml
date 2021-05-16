@@ -16,6 +16,7 @@
     <string name="about_game_2">\t\t\t\t\t It is an "Enemy killing" Game, where the core gameplay is based on making weapon to touch the enemy and killing that enemy. Killing an enemy leaves an empty space at its location.</string>
     <string name="about_game_3">\t\t\t\t\t The game is split in different levels. Each level poses different challenge to the player,such as achieving minimum score and dealing with different clone of enemies.</string>
 
+    <string name="demo">🤔\t DEMO VIDEO 👇🏿</string>
     <string name="ques1">🤔\t Who is Cave Man ?</string>
     <string name="ans1">\t\t\t📌 Cave Man is the saviour of the cave. He will be found sitting on tree on PLay Screen and will be able to kill the enemies coming from right side through axe (his weapon).</string>
     <string name="ques2">🤔\t Who are the Enemies in red ?</string>
