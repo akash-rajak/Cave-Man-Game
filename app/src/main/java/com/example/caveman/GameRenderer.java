@@ -249,8 +249,12 @@ public class GameRenderer implements Renderer {
 				if (weapon.ready())
 					if (weapon.collidesWith(enemies.get(i).getX(),
 							enemies.get(i).getPosition() * rowsize)) {
-						if (enemies.get(i).getType() == 1 && setOnFire == false)
-							enemies.get(i).stopForAWhile();
+						if (enemies.get(i).getType() == 1 && setOnFire == false){
+							//enemies.get(i).stopForAWhile();
+							enemies.get(i).die();
+							enemiesLeft--;
+							pipe.setScore(pipe.getScore() - 10);
+						}
 						else {
 							killSound();
 							enemies.get(i).die();
