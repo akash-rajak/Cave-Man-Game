@@ -4,6 +4,7 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements AnimationListener {
 	// Creating button for menu of the game ------------------------------------------------------------------------
@@ -23,6 +26,7 @@ public class MainActivity extends Activity implements AnimationListener {
 	private Button HelpButton;//Creates a new HelpButton
 	private Button CreditsButton;//Creates a new CreditsButton
 	private Button IButton;//Creates a new IButton
+	Button ClickButton;
 
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
 	private MediaPlayer mp;//Creates a new MediaPlayer to play any kind of sound
@@ -138,6 +142,22 @@ public class MainActivity extends Activity implements AnimationListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_layout);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+		ClickButton = findViewById(R.id.click_button);
+		ClickButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast toast;
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDCCC Head over to HELP button to see how to play game.",Toast.LENGTH_SHORT);
+				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+				toastMessage.setTextSize(30);
+				toastMessage.setTextColor(Color.GREEN);
+				View view = toast.getView();
+				view.setBackgroundColor(Color.BLACK);
+				toast.show();
+			}
+		});
+
 		for (int i = 0; i < 6; i++)
 			selected[i] = false;// we here initialize all the boolean array element as false, indicating initially not selected
 		createMenuButtons();// then createMenuButtons() function is called
