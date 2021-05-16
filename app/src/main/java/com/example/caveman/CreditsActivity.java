@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -35,6 +36,7 @@ public class CreditsActivity extends Activity {
 	Button goodbutton;
 	Button badbutton;
 	Button sharebutton;
+	Button followbutton;
 
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
@@ -64,6 +66,18 @@ public class CreditsActivity extends Activity {
 
 //		TextView textView = (TextView)findViewById(R.id.textView);
 //		textView.setMovementMethod(LinkMovementMethod.getInstance());
+		followbutton = findViewById(R.id.follow_button);
+		followbutton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				String url = "https://github.com/akash435/Cave-Man-Game";
+
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse(url));
+				startActivity(intent);
+			}
+		});
 
 		goodbutton = findViewById(R.id.Good);
 		goodbutton.setOnClickListener(new View.OnClickListener() {

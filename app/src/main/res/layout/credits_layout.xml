@@ -98,7 +98,16 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:background="@layout/sharebutton_layout"
-		android:layout_marginLeft="120dip"
+		android:layout_marginLeft="300dip"
+		android:layout_marginTop="250dip"
+		android:soundEffectsEnabled="false"/>
+
+	<Button
+		android:id="@+id/follow_button"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@layout/followbutton_layout"
+		android:layout_marginLeft="400dip"
 		android:layout_marginTop="250dip"
 		android:soundEffectsEnabled="false"/>
 
