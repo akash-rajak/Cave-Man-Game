@@ -65,7 +65,7 @@ public class GameActivity extends Activity {
 		userInter.initActions();
 		extras = this.getIntent().getExtras();
 		level = extras.getString("level");
-		score = extras.getInt("score");
+		score = extras.getInt("score");//----------------------- not working -----------------------------------------------
 		surface = new com.example.caveman.GameView(this, height, width, Integer.parseInt(level));
 		setContentView(surface);
 		addContentView(userInter, new LayoutParams(LayoutParams.FILL_PARENT,

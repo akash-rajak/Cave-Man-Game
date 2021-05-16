@@ -83,6 +83,8 @@ public class GameRenderer implements Renderer {
 	// when the rest of the enemies touch the edge
 	private boolean hasLost = false;
 
+//	private Paint paint = new Paint();// A new Paint object
+
 	// Takes the appropriate actions required by the OpenGL layer in order to start a new game.
 	// Initializes the characters, populates the List of the enemies for the current level etc.
 	public GameRenderer(Context context, int height, int width, int level) {
@@ -104,8 +106,20 @@ public class GameRenderer implements Renderer {
 		this.context = context;
 		pipe.setLevelComplete(false);
 		pipe.setScore(0);
+
+//		paint.setColor(Color.YELLOW);
+//		paint.setStyle(Paint.Style.STROKE);
+//		paint.setStrokeWidth(2);
 	}
 
+//	// This function draws the score achieved so far
+//	private void drawLevel(Canvas canvas) {
+//		paint.setAntiAlias(true);
+//		paint.setTextSize(40);
+//
+//		canvas.drawText("\uD83E\uDDFF LEVEL : " + level , 40, 180, paint);
+//	}
+	
 	// Method responsible to assign the textures to all the components of the game
 	private void assignTextures() {
 		for (int i = 0; i < enemies.size(); i++)
@@ -141,6 +155,8 @@ public class GameRenderer implements Renderer {
 
 	// Method responsible to draw the game-over image
 	private void drawGameOverScreen() {
+//		Canvas canvas = null;
+//		this.drawLevel(canvas);
 		gl.glPushMatrix();
 		gl.glTranslatef(width / 2, height / 2, 0.0f);
 		gl.glRotatef(90, 0.0f, 0.0f, 1.0f);

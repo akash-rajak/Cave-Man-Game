@@ -67,7 +67,7 @@ public class UserInteract extends View implements OnTouchListener {
 		myThread.start();
 	}
 
-	// This function draws the score achieved so far
+	// This function draws the score achieved so far ----- // 60 120 180
 	private void drawScore(Canvas canvas) {
 		paint.setAntiAlias(true);
 		paint.setTextSize(40);
