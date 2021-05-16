@@ -78,7 +78,7 @@
           android:id="@+id/click_button"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginLeft="30dip"
+          android:layout_marginLeft="40dip"
           android:layout_marginTop="20dip"
           android:background="@layout/clickbutton_layout"
           android:soundEffectsEnabled="false"/>
