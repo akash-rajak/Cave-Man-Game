@@ -82,7 +82,7 @@ public class CreditsActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Toast toast;
-				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDCCC Thanks for the Feedback. We are sorry that you are having problem with game, Please give detailed feedback on Play Store review..",Toast.LENGTH_SHORT);
+				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDCCC Thanks for the Feedback. We are sorry that you are having problem with game, Please give detailed feedback on Play Store review.",Toast.LENGTH_SHORT);
 				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
 				toastMessage.setTextSize(30);
 				toastMessage.setTextColor(Color.GREEN);
