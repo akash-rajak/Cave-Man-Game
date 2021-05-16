@@ -80,6 +80,7 @@
 		android:textStyle="bold"
 		tools:visibility="invisible" />
 
+	<!--
 	<TextView
 		android:id="@+id/textView"
 		android:layout_width="wrap_content"
@@ -90,12 +91,13 @@
 		android:textColor="#64DD17"
 		android:textSize="34sp"
 		android:textStyle="italic" />
+	-->
 
 	<TextView
 		android:id="@+id/textView2"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginLeft="80dip"
+		android:layout_marginLeft="50dip"
 		android:layout_marginTop="240dip"
 		android:text="@string/feedback"
 		android:textColor="#FFAB00"

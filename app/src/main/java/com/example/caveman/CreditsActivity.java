@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -59,8 +58,8 @@ public class CreditsActivity extends Activity {
 			}
 		});
 
-		TextView textView = (TextView)findViewById(R.id.textView);
-		textView.setMovementMethod(LinkMovementMethod.getInstance());
+//		TextView textView = (TextView)findViewById(R.id.textView);
+//		textView.setMovementMethod(LinkMovementMethod.getInstance());
 
 		goodbutton = findViewById(R.id.Good);
 		goodbutton.setOnClickListener(new View.OnClickListener() {
