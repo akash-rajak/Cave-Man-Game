@@ -30,7 +30,11 @@
     <string name="ques5">🤔\t What does player gets on killing each Black Enemy ?</string>
     <string name="ans5">\t\t\t📌 On killing each Black Enemy, player gets penalty of 5 points.</string>
     <string name="ques6">🤔\t How to play game ?</string>
-    <string name="ans6">\t\t\t📌 The game is simple and above the FAQs there is a demo video showing how to play game. Firstly, player need to select the game level, and then he will be directed to the corresponding level. Now the axe is with CAVE MAN sitting on the tree, and with the use of axe, he needs to kill the red enemies (because on killing red enemies he gets 10 extra points). The player need to touch the top of caveman and drag the axe towards the enemies coming from right side, and as the axe touches the Red Enemies, they got killed and player gets 10 extra points and score increases respectively. When the axe touches the Black enemies they also got killed, but player gets the penalty of 5 points. As the first enemy touches the left of the game screen, the GAME OVER! message will be displayed indicating that level is over.</string>
+    <string name="ans6line1">\t\t\t📌 The game is simple and above the FAQs there is a demo video showing how to play game.</string>
+    <string name="ans6line2">\t\t\t📌 Firstly, player need to select the game level, and then he will be directed to the corresponding level. Now the axe is with CAVE MAN sitting on the tree, and with the use of axe, he needs to kill the red enemies (because on killing red enemies he gets 10 extra points).</string>
+    <string name="ans6line3">\t\t\t📌 The player need to touch the top of caveman and drag the axe towards the enemies coming from right side, and as the axe touches the Red Enemies, they got killed and player gets 10 extra points and score increases respectively.</string>
+    <string name="ans6line4">\t\t\t📌 When the axe touches the Black enemies they also got killed, but player gets the penalty of 5 points. As the first enemy touches the left of the game screen, the GAME OVER! message will be displayed indicating that level is over.</string>
+
     <string name="ques7">🤔\t When will the "GAME OVER!" message will be displayed ?</string>
     <string name="ans7">\t\t\t📌 The GAME OVER! message will be displayed on screen when particular level finishes. At this point, If player want to play next level, need to touch anywhere on the screen. Otherwise pressing the back key and player will be directed to the MENU page.</string>
     <string name="ques8">🤔\t What is Level Score ?</string>
