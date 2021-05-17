@@ -30,7 +30,7 @@ public class MainActivity extends Activity implements AnimationListener {
 	Button ClickButton;
 	ImageView ImageArrow1;
 
-	private void createarrowimage() {
+	private void createarrowimage1() {
 		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
 
 		ImageArrow1 = (ImageView) findViewById(R.id.arrow_image1);
@@ -152,7 +152,7 @@ public class MainActivity extends Activity implements AnimationListener {
 		setContentView(R.layout.menu_layout);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
-		createarrowimage();
+		createarrowimage1();
 
 		ClickButton = findViewById(R.id.click_button);
 		ClickButton.setOnClickListener(new View.OnClickListener() {

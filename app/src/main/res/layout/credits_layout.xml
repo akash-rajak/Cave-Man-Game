@@ -93,6 +93,7 @@
 		android:textStyle="italic" />
 	-->
 
+	<!--
 	<Button
 		android:id="@+id/arrow_button"
 		android:layout_width="wrap_content"
@@ -101,6 +102,14 @@
 		android:layout_marginLeft="80dip"
 		android:layout_marginTop="245dip"
 		android:soundEffectsEnabled="false"/>
+	-->
+	<ImageView
+		android:id="@+id/arrow_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="80dip"
+		android:layout_marginTop="245dip"
+		android:src="@drawable/arrow" />
 
 	<Button
 		android:id="@+id/share_button"
