@@ -49,5 +49,6 @@
     <string name="ans12">\t\t\t📌 On Clicking on credits button, Player will be able to see the contact information of the developer and also gets a feedback option.</string>
     <string name="ques13">🤔\t What is there in About button of MENU page ?</string>
     <string name="ans13">\t\t\t📌 On clicking on about button, Player wiil be able to see information(description) about the game.</string>
-    <string name="end">🌞🌟🌞 PLAY N\' ENJOY 🌞🌟🌞</string>
+    <!--<string name="end">🌞🌟🌞 PLAY N\' ENJOY 🌞🌟🌞</string>-->
+    <string name="end">🌞🌟🌞 CAVE SAVIOUR 🌞🌟🌞</string>
 </resources>
