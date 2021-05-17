@@ -28,24 +28,24 @@
 <!--        android:layout_marginRight="100dip"-->
 <!--        android:background="@layout/welcomebutton_layout"-->
 <!--        android:soundEffectsEnabled="true" />-->
-<!--    <ImageView-->
-<!--        android:id="@+id/Welcome"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="220dip"-->
-<!--        android:layout_marginBottom="40dip"-->
-<!--        android:layout_marginLeft="280dip"-->
-<!--        android:layout_marginRight="100dip"-->
-<!--        android:src="@drawable/welcome" />-->
-
     <ImageView
         android:id="@+id/Welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dip"
+        android:layout_marginTop="220dip"
         android:layout_marginBottom="40dip"
-        android:layout_marginLeft="150dip"
-        android:layout_marginRight="30dip"
-        android:src="@drawable/welcome_toast" />
+        android:layout_marginLeft="280dip"
+        android:layout_marginRight="100dip"
+        android:src="@drawable/welcome" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Welcome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="250dip"-->
+<!--        android:layout_marginBottom="40dip"-->
+<!--        android:layout_marginLeft="150dip"-->
+<!--        android:layout_marginRight="30dip"-->
+<!--        android:src="@drawable/welcome_toast" />-->
 
 </LinearLayout>
