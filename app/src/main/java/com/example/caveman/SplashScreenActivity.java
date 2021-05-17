@@ -65,6 +65,7 @@ public class SplashScreenActivity extends Activity {
 			public void onClick(View v) {
 				Toast toast;
 				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
+				//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
 				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
 				toastMessage.setTextSize(30);
 				toastMessage.setTextColor(Color.RED);
