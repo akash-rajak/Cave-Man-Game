@@ -58,6 +58,8 @@ public class SplashScreenActivity extends Activity {
 		ImageWelcome.startAnimation(AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.blink));
 	}
 
+	//LinearLayout splashLayout;
+
 	// This function is called when the activity is first created. ----------------------------------------------------
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -69,7 +71,9 @@ public class SplashScreenActivity extends Activity {
 		//Toast.makeText(SplashScreenActivity.this,"Firebase Connection Success",Toast.LENGTH_LONG).show();
 		clickSound();
 
-		
+//		Snackbar snackbar = Snackbar.make(splashLayout, "Welcome to AndroidHive", Snackbar.LENGTH_LONG);
+//		snackbar.show();
+
 		Toast toast;
 		toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
 		//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
