@@ -3,17 +3,13 @@ package com.example.caveman;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class SplashScreenActivity extends Activity {
 	protected volatile boolean active = true;//Holds the state of the splash screen, wheteher its active or not
@@ -69,15 +65,15 @@ public class SplashScreenActivity extends Activity {
 		//Toast.makeText(SplashScreenActivity.this,"Firebase Connection Success",Toast.LENGTH_LONG).show();
 		clickSound();
 
-		Toast toast;
-		toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
-		//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
-		TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-		toastMessage.setTextSize(30);
-		toastMessage.setTextColor(Color.RED);
-		View view = toast.getView();
-		view.setBackgroundColor(Color.BLACK);
-		toast.show();
+//		Toast toast;
+//		toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
+//		//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
+//		TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+//		toastMessage.setTextSize(30);
+//		toastMessage.setTextColor(Color.RED);
+//		View view = toast.getView();
+//		view.setBackgroundColor(Color.BLACK);
+//		toast.show();
 
 //		welcomebutton.setOnClickListener(new View.OnClickListener() {
 //			@Override
