@@ -17,16 +17,25 @@
         android:layout_height="wrap_content"
         android:contentDescription="@null" />
       -->
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/Welcome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="220dip"-->
+<!--        android:layout_marginBottom="40dip"-->
+<!--        android:layout_marginLeft="280dip"-->
+<!--        android:layout_marginRight="100dip"-->
+<!--        android:background="@layout/welcomebutton_layout"-->
+<!--        android:soundEffectsEnabled="true" />-->
+    <ImageView
         android:id="@+id/Welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="220dip"
         android:layout_marginBottom="40dip"
         android:layout_marginLeft="280dip"
         android:layout_marginRight="100dip"
-        android:background="@layout/welcomebutton_layout"
-        android:soundEffectsEnabled="true" />
+        android:src="@drawable/welcome" />
 
 </LinearLayout>

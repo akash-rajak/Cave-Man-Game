@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,20 +34,28 @@ public class SplashScreenActivity extends Activity {
 		mp.start();
 	}
 
-	Button welcomebutton;
-	private void createwelcomeButtons() {
+//	Button welcomebutton;
+//	private void createwelcomeButtons() {
+//		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
+//
+//		// for GameButton ----------------------
+//		welcomebutton = (Button) findViewById(R.id.Welcome);
+//		welcomebutton.startAnimation(AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.blink));
+//		welcomebutton.setOnClickListener(new View.OnClickListener() {
+//			public void onClick(View v) {
+//				clickSound();
+//				welcomebutton.startAnimation(animation1);
+//				animation1.setAnimationListener((Animation.AnimationListener) SplashScreenActivity.this);
+//			}
+//		});
+//	}
+	ImageView ImageWelcome;
+
+	private void createwelcomeimage() {
 		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
 
-		// for GameButton ----------------------
-		welcomebutton = (Button) findViewById(R.id.Welcome);
-		welcomebutton.startAnimation(AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.blink));
-		welcomebutton.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				clickSound();
-				welcomebutton.startAnimation(animation1);
-				animation1.setAnimationListener((Animation.AnimationListener) SplashScreenActivity.this);
-			}
-		});
+		ImageWelcome = (ImageView) findViewById(R.id.Welcome);
+		ImageWelcome.startAnimation(AnimationUtils.loadAnimation(SplashScreenActivity.this, R.anim.blink));
 	}
 
 	// This function is called when the activity is first created. ----------------------------------------------------
@@ -55,25 +63,36 @@ public class SplashScreenActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
-		createwelcomeButtons();
+		//createwelcomeButtons();
+		createwelcomeimage();
 
 		//Toast.makeText(SplashScreenActivity.this,"Firebase Connection Success",Toast.LENGTH_LONG).show();
 		clickSound();
 
-		welcomebutton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Toast toast;
-				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
-				//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
-				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-				toastMessage.setTextSize(30);
-				toastMessage.setTextColor(Color.RED);
-				View view = toast.getView();
-				view.setBackgroundColor(Color.BLACK);
-				toast.show();
-			}
-		});
+		Toast toast;
+		toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
+		//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
+		TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+		toastMessage.setTextSize(30);
+		toastMessage.setTextColor(Color.RED);
+		View view = toast.getView();
+		view.setBackgroundColor(Color.BLACK);
+		toast.show();
+
+//		welcomebutton.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Toast toast;
+//				toast = Toast.makeText(getApplicationContext(),"\uD83D\uDE0E Welcome! to Cave Saviour Game",Toast.LENGTH_SHORT);
+//				//toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.START,100,-220);
+//				TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+//				toastMessage.setTextSize(30);
+//				toastMessage.setTextColor(Color.RED);
+//				View view = toast.getView();
+//				view.setBackgroundColor(Color.BLACK);
+//				toast.show();
+//			}
+//		});
 		// thread for displaying the splash screen
 		splashThread = new Thread() {
 			@Override
