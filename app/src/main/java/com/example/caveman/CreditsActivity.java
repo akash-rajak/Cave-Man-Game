@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-import android.widget.ViewFlipper;
 
 import androidx.annotation.RequiresApi;
 
@@ -33,7 +32,7 @@ public class CreditsActivity extends Activity {
 		mp.start();// media player is started
 	}
 
-	private ViewFlipper mFlipper;//A flipper to switch between the credits
+	//private ViewFlipper mFlipper;//A flipper to switch between the credits
 
 	ToggleButton togglebutton;// a togglebutton variable
 	Button goodbutton;
@@ -72,8 +71,8 @@ public class CreditsActivity extends Activity {
 		setContentView(R.layout.credits_layout);// content of credits_layout.xml are set, on credits page
 		//createarrowButtons();
 		createarrowimage();
-		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
-		mFlipper.startFlipping();
+//		mFlipper = ((ViewFlipper) this.findViewById(R.id.flipper));
+//		mFlipper.startFlipping();
 
 		togglebutton = findViewById(R.id.toggle4);
 		togglebutton.setOnClickListener(new View.OnClickListener() {
@@ -209,7 +208,7 @@ public class CreditsActivity extends Activity {
 				Intent intent = new Intent(Intent.ACTION_SEND);
 				intent.setType("text/plain");
 				String title = "Game";
-				String link = "Download My First game (Cave Saviour) through this drive link :- https://drive.google.com/file/d/1GCPOEna6PZN_bzukqUgLcwti1aHzNq2v/view?usp=sharing";
+				String link = "Check out My First game (Cave Saviour) through APK with this drive link :- https://drive.google.com/file/d/1jl6Gs0_HSiXvCY72hgHI3nCMjmZQ5lyG/view?usp=sharing";
 				intent.putExtra(Intent.EXTRA_TITLE,title);
 				intent.putExtra(Intent.EXTRA_TEXT,link);
 				startActivity(intent.createChooser(intent,"Share Using"));
