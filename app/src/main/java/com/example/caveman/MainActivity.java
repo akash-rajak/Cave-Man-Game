@@ -15,6 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,14 @@ public class MainActivity extends Activity implements AnimationListener {
 	private Button CreditsButton;//Creates a new CreditsButton
 	private Button IButton;//Creates a new IButton
 	Button ClickButton;
+	ImageView ImageArrow1;
+
+	private void createarrowimage() {
+		final Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.clicked);
+
+		ImageArrow1 = (ImageView) findViewById(R.id.arrow_image1);
+		ImageArrow1.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.blink));
+	}
 
 	// Creating Media Player to play any sound or music -------------------------------------------------------------
 	private MediaPlayer mp;//Creates a new MediaPlayer to play any kind of sound
@@ -142,6 +151,8 @@ public class MainActivity extends Activity implements AnimationListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_layout);
 		setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+		createarrowimage();
 
 		ClickButton = findViewById(R.id.click_button);
 		ClickButton.setOnClickListener(new View.OnClickListener() {
