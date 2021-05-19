@@ -296,7 +296,7 @@ public class GameRenderer implements Renderer {
 //				onGameOver(i);
 			if (!enemies.get(i).isDead())
 			{
-				enemies.get(i).setSpeed(3);
+				enemies.get(i).setSpeed(3);// speed of the enemy can be directly changed from the basic enemy java file
 				enemies.get(i).setX(
 						enemies.get(i).getX() - enemies.get(i).getSpeed());
 			}

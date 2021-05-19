@@ -21,7 +21,7 @@ public class BasicEnemy extends TextureLoader {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			setSpeed(1);
+			setSpeed(1);// speed can be changed from game renderer moveEnemies function
 		}
 	}
 	private int x;// stores the position of enemy on x axis

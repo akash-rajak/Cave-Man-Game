@@ -45,6 +45,8 @@ public class UserInteract extends View implements OnTouchListener {
 	private boolean correct = false;
 	// Holds the score of the level
 	private int score = 0;
+	// Holds time
+	//private int time = 120;
 
 	// Thread created for the timer
 	private Thread myThread = new Thread(new UpdateThread());
@@ -84,6 +86,7 @@ public class UserInteract extends View implements OnTouchListener {
 		}
 
 		//canvas.drawText("\uD83C\uDFC6 WINNING SCORE : " + 50, 40, 120, paint);
+		//canvas.drawText("⏰ TIME : " + time--, 40, 180, paint);
 	}
 
 	// Clears the values stored in the ArrayList of the Pipe
