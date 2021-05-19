@@ -76,7 +76,7 @@ public class UserInteract extends View implements OnTouchListener {
 		//canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore() + "  \uD83C\uDFC6 WINNING SCORE : " + 50, 40, 60, paint);
 		canvas.drawText("\uD83D\uDCB0 SCORE : " + pipe.getScore() + " / \uD83C\uDFC6 " + 500, 40, 60, paint);
 
-		if(pipe.getScore()>=50){
+		if(pipe.getScore()>=500){
 			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
 			//canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
 		}

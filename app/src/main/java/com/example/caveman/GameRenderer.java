@@ -279,7 +279,7 @@ public class GameRenderer implements Renderer {
 							killwrongSound();
 							enemies.get(i).die();
 							enemiesLeft--;
-							pipe.setScore(pipe.getScore() - 5);
+							pipe.setScore(pipe.getScore() - 10);
 						}
 						else {
 							killSound();
@@ -296,14 +296,14 @@ public class GameRenderer implements Renderer {
 //				onGameOver(i);
 			if (!enemies.get(i).isDead())
 			{
-				enemies.get(i).setSpeed(3);// speed of the enemy can be directly changed from the basic enemy java file
+				enemies.get(i).setSpeed(5);// speed of the enemy can be directly changed from the basic enemy java file
 				enemies.get(i).setX(
 						enemies.get(i).getX() - enemies.get(i).getSpeed());
 			}
 			// to end game at starting od first, 20
 			// to end the game at starting of 2nd , -50
 			// difference is of 70
-			if(enemies.get(i).getX() <= -3430)
+			if(enemies.get(i).getX() <= -14000)
 				onGameOver(i);
 		}
 	}
