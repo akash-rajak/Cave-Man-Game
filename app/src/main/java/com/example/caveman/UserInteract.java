@@ -72,14 +72,14 @@ public class UserInteract extends View implements OnTouchListener {
 		paint.setAntiAlias(true);
 		paint.setTextSize(40);
 		//canvas.drawText("\uD83D\uDCB0 LEVEL SCORE : " + pipe.getScore() + "  \uD83C\uDFC6 WINNING SCORE : " + 50, 40, 60, paint);
-		canvas.drawText("\uD83D\uDCB0 SCORE : " + pipe.getScore() + " / \uD83C\uDFC6 " + 50, 40, 60, paint);
+		canvas.drawText("\uD83D\uDCB0 SCORE : " + pipe.getScore() + " / \uD83C\uDFC6 " + 500, 40, 60, paint);
 
 		if(pipe.getScore()>=50){
 			canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
 			//canvas.drawText("\uD83E\uDDFF STATUS : YOU WON \uD83D\uDE0E", 40, 120, paint);
 		}
 		else{
-			canvas.drawText("\uD83E\uDDFF STATUS : NEED " + (50 - pipe.getScore()) + " POINTS \uD83D\uDE44", 40, 120, paint);
+			canvas.drawText("\uD83E\uDDFF STATUS : NEED " + (500 - pipe.getScore()) + " POINTS \uD83D\uDE44", 40, 120, paint);
 			//canvas.drawText("\uD83E\uDDFF STATUS : YOU NEED " + (50 - pipe.getScore()) + " EXTRA SCORE TO WIN \uD83D\uDE44", 40, 120, paint);
 		}
 
