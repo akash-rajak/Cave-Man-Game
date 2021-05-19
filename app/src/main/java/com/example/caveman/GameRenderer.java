@@ -238,6 +238,15 @@ public class GameRenderer implements Renderer {
 		mp.start();
 	}
 
+	// Method responsible to play a sound each time an wrong enemy gets killed.
+	private void killwrongSound() {
+		if (mp != null) {
+			mp.release();
+		}
+		mp = MediaPlayer.create(context.getApplicationContext(), R.raw.wrongkill);
+		mp.start();
+	}
+
 	// Method responsible to play a sound each time gameover message displayed.
 	private void GameOverSound() {
 		if (mp != null) {
@@ -267,6 +276,7 @@ public class GameRenderer implements Renderer {
 							enemies.get(i).getPosition() * rowsize)) {
 						if (enemies.get(i).getType() == 1 && setOnFire == false){
 							//enemies.get(i).stopForAWhile();
+							killwrongSound();
 							enemies.get(i).die();
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() - 5);
