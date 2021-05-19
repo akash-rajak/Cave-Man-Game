@@ -39,7 +39,7 @@ public class GameActivity extends Activity {
 		if (mp != null) {
 			mp.release();
 		}
-		mp = MediaPlayer.create(getApplicationContext(), R.raw.music1);
+		mp = MediaPlayer.create(getApplicationContext(), R.raw.music11);
 		mp.start();
 	}
 
