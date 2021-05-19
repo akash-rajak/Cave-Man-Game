@@ -289,10 +289,21 @@ public class GameRenderer implements Renderer {
 						}
 					}
 			}
-			if (enemies.get(i).getX() >= -20 && !enemies.get(i).isDead())
+//			if (enemies.get(i).getX() >= -20 && !enemies.get(i).isDead())
+//				enemies.get(i).setX(
+//						enemies.get(i).getX() - enemies.get(i).getSpeed());
+//			else
+//				onGameOver(i);
+			if (!enemies.get(i).isDead())
+			{
+				enemies.get(i).setSpeed(3);
 				enemies.get(i).setX(
 						enemies.get(i).getX() - enemies.get(i).getSpeed());
-			else
+			}
+			// to end game at starting od first, 20
+			// to end the game at starting of 2nd , -50
+			// difference is of 70
+			if(enemies.get(i).getX() <= -3430)
 				onGameOver(i);
 		}
 	}
@@ -352,7 +363,7 @@ public class GameRenderer implements Renderer {
 			}
 		}
 		if (hasLost){
-			GameOverSound();
+			//GameOverSound();
 			drawGameOverScreen();
 		}
 
