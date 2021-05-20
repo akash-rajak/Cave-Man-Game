@@ -1,4 +1,4 @@
-# ✔ CAVE MAN GAME - APP
+# ✔ CAVEMAN - THE SAVIOUR (GAME APP)
 
 - ### A simple Cave Man Game(flash game) with Android Studio.<br>
 - ### Here SQLite data base is used to store the data of the player.(link to download SQLite DB Browser : https://sqlitebrowser.org/dl/<br><br>
