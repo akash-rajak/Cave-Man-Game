@@ -4,7 +4,7 @@
 
 	<enemy type="SimpleEnemy" time="2" position="5" />
 
-	<enemy type="SimpleEnemy" time="3" position="6" />
+	<enemy type="FireEnemy" time="3" position="6" />
 
 	<enemy type="JumpingEnemy" time="4" position="7" />
 	<enemy type="JumpingEnemy" time="4" position="3" />
@@ -56,7 +56,7 @@
 
 	<enemy type="SimpleEnemy" time="24" position="3" />
 
-	<enemy type="SimpleEnemy" time="25" position="4" />
+	<enemy type="BonusEnemy" time="25" position="4" />
 
 	<enemy type="SimpleEnemy" time="26" position="5" />
 
@@ -64,7 +64,7 @@
 
 	<enemy type="JumpingEnemy" time="28" position="7" />
 	<enemy type="JumpingEnemy" time="28" position="3" />
-	<enemy type="JumpingEnemy" time="28" position="5" />
+	<enemy type="FireEnemy" time="28" position="5" />
 
 	<enemy type="SimpleEnemy" time="29" position="6" />
 
@@ -116,7 +116,7 @@
 
 	<enemy type="SimpleEnemy" time="50" position="5" />
 
-	<enemy type="SimpleEnemy" time="51" position="6" />
+	<enemy type="FireEnemy" time="51" position="6" />
 
 	<enemy type="SimpleEnemy" time="52" position="7" />
 
@@ -134,7 +134,7 @@
 
 	<enemy type="SimpleEnemy" time="58" position="1" />
 
-	<enemy type="SimpleEnemy" time="59" position="2" />
+	<enemy type="BonusEnemy" time="59" position="2" />
 
 	<enemy type="SimpleEnemy" time="60" position="3" />
 
@@ -181,7 +181,7 @@
 	<enemy type="SimpleEnemy" time="78" position="5" />
 
 	<enemy type="JumpingEnemy" time="79" position="4" />
-	<enemy type="SimpleEnemy" time="79" position="3" />
+	<enemy type="FireEnemy" time="79" position="3" />
 	<enemy type="SimpleEnemy" time="79" position="5" />
 
 	<enemy type="SimpleEnemy" time="80" position="3" />
@@ -232,7 +232,7 @@
 
 	<enemy type="SimpleEnemy" time="100" position="7" />
 
-	<enemy type="SimpleEnemy" time="101" position="6" />
+	<enemy type="BonusEnemy" time="101" position="6" />
 
 	<enemy type="SimpleEnemy" time="102" position="5" />
 
@@ -312,7 +312,7 @@
 
 	<enemy type="SimpleEnemy" time="134" position="5" />
 
-	<enemy type="SimpleEnemy" time="135" position="6" />
+	<enemy type="BonusEnemy" time="135" position="6" />
 
 	<enemy type="SimpleEnemy" time="136" position="7" />
 
@@ -320,7 +320,7 @@
 
 	<enemy type="SimpleEnemy" time="138" position="5" />
 
-	<enemy type="JumpingEnemy" time="139" position="4" />
+	<enemy type="FireEnemy" time="139" position="4" />
 	<enemy type="SimpleEnemy" time="139" position="3" />
 	<enemy type="SimpleEnemy" time="139" position="5" />
 
@@ -420,7 +420,7 @@
 
 	<enemy type="SimpleEnemy" time="181" position="4" />
 
-	<enemy type="SimpleEnemy" time="182" position="5" />
+	<enemy type="FireEnemy" time="182" position="5" />
 
 	<enemy type="SimpleEnemy" time="183" position="6" />
 
@@ -436,7 +436,7 @@
 
 	<enemy type="SimpleEnemy" time="188" position="3" />
 
-	<enemy type="SimpleEnemy" time="189" position="2" />
+	<enemy type="BonusEnemy" time="189" position="2" />
 
 	<enemy type="JumpingEnemy" time="190" position="1" />
 	<enemy type="JumpingEnemy" time="190" position="3" />

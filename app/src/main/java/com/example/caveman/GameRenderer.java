@@ -306,19 +306,19 @@ public class GameRenderer implements Renderer {
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() - 10);
 						}
-						else if(enemies.get(i).getType() == 0){//simple enemy
+						if(enemies.get(i).getType() == 0){//simple enemy
 							killSound();
 							enemies.get(i).die();
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() + 10);
 						}
-						else if(enemies.get(i).getType() == 2){// fire enemy
+						if(enemies.get(i).getType() == 2){// fire enemy
 							killfireSound();
 							enemies.get(i).die();
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() - 50);
 						}
-						else if(enemies.get(i).getType() == 3){// bonus enemy
+						if(enemies.get(i).getType() == 3){// bonus enemy
 							killbonusSound();
 							enemies.get(i).die();
 							enemiesLeft--;

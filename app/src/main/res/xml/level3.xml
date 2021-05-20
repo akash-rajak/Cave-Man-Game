@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <level>
-	<enemy type="SimpleEnemy" time="1" position="4" />
+	<enemy type="FireEnemy" time="1" position="4" />
 
 	<enemy type="SimpleEnemy" time="2" position="5" />
 
@@ -9,7 +9,7 @@
 	<enemy type="JumpingEnemy" time="4" position="7" />
 	<enemy type="JumpingEnemy" time="4" position="2" />
 
-	<enemy type="SimpleEnemy" time="5" position="6" />
+	<enemy type="BonusEnemy" time="5" position="6" />
 
 	<enemy type="SimpleEnemy" time="6" position="5" />
 
@@ -52,7 +52,7 @@
 
 	<enemy type="SimpleEnemy" time="24" position="3" />
 
-	<enemy type="SimpleEnemy" time="25" position="4" />
+	<enemy type="FireEnemy" time="25" position="4" />
 
 	<enemy type="SimpleEnemy" time="26" position="5" />
 
@@ -171,7 +171,7 @@
 
 	<enemy type="SimpleEnemy" time="79" position="4" />
 
-	<enemy type="SimpleEnemy" time="80" position="3" />
+	<enemy type="FireEnemy" time="80" position="3" />
 
 	<enemy type="SimpleEnemy" time="81" position="2" />
 
@@ -215,7 +215,7 @@
 	<enemy type="SimpleEnemy" time="99" position="6" />
 
 	<enemy type="JumpingEnemy" time="100" position="7" />
-	<enemy type="JumpingEnemy" time="100" position="2" />
+	<enemy type="BonusEnemy" time="100" position="2" />
 
 	<enemy type="SimpleEnemy" time="101" position="6" />
 
@@ -301,7 +301,7 @@
 
 	<enemy type="SimpleEnemy" time="139" position="4" />
 
-	<enemy type="SimpleEnemy" time="140" position="3" />
+	<enemy type="FireEnemy" time="140" position="3" />
 
 	<enemy type="SimpleEnemy" time="141" position="2" />
 
@@ -381,7 +381,7 @@
 
 	<enemy type="SimpleEnemy" time="176" position="3" />
 
-	<enemy type="SimpleEnemy" time="177" position="2" />
+	<enemy type="FireEnemy" time="177" position="2" />
 
 	<enemy type="JumpingEnemy" time="178" position="1" />
 	<enemy type="JumpingEnemy" time="178" position="6" />
@@ -420,7 +420,7 @@
 
 	<enemy type="SimpleEnemy" time="194" position="5" />
 
-	<enemy type="SimpleEnemy" time="195" position="6" />
+	<enemy type="BonusEnemy" time="195" position="6" />
 
 	<enemy type="JumpingEnemy" time="196" position="7" />
 	<enemy type="JumpingEnemy" time="196" position="2" />
