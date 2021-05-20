@@ -15,6 +15,8 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 
 import com.example.caveman.enemies.BasicEnemy;
+import com.example.caveman.enemies.BonusEnemy;
+import com.example.caveman.enemies.FireEnemy;
 import com.example.caveman.enemies.JumpingEnemy;
 import com.example.caveman.enemies.SimpleEnemy;
 import com.example.caveman.hero.Hero;
@@ -141,6 +143,10 @@ public class GameRenderer implements Renderer {
 				enemies.add(new SimpleEnemy(height));
 			else if (lvlStr.get(i).equals("JumpingEnemy"))
 				enemies.add(new JumpingEnemy(height));
+			else if (lvlStr.get(i).equals("FireEnemy"))
+				enemies.add(new FireEnemy(height));
+			else if (lvlStr.get(i).equals("BonusEnemy"))
+				enemies.add(new BonusEnemy(height));
 			else
 				// In case of typo add a SimpleEnemy
 				enemies.add(new SimpleEnemy(height));
@@ -247,6 +253,24 @@ public class GameRenderer implements Renderer {
 		mp.start();
 	}
 
+	// Method responsible to play a sound each time an wrong enemy gets killed.
+	private void killfireSound() {
+		if (mp != null) {
+			mp.release();
+		}
+		mp = MediaPlayer.create(context.getApplicationContext(), R.raw.fire_enemy_sound);
+		mp.start();
+	}
+
+	// Method responsible to play a sound each time an wrong enemy gets killed.
+	private void killbonusSound() {
+		if (mp != null) {
+			mp.release();
+		}
+		mp = MediaPlayer.create(context.getApplicationContext(), R.raw.bonus_enemy_sound);
+		mp.start();
+	}
+
 	// Method responsible to play a sound each time gameover message displayed.
 	private void GameOverSound() {
 		if (mp != null) {
@@ -256,6 +280,7 @@ public class GameRenderer implements Renderer {
 		mp.start();
 	}
 
+//	private int x1 = 0;
 	// Method responsible to move all the enemies on each frame.
 	// It also checks for collisions between the axe and the enemies and if they do collide it
 	// kills (or stops for a while) the correct enemy and reduces the amount of enemies left.
@@ -274,18 +299,30 @@ public class GameRenderer implements Renderer {
 				if (weapon.ready())
 					if (weapon.collidesWith(enemies.get(i).getX(),
 							enemies.get(i).getPosition() * rowsize)) {
-						if (enemies.get(i).getType() == 1 && setOnFire == false){
+						if (enemies.get(i).getType() == 1 && setOnFire == false){// jumping enemy
 							//enemies.get(i).stopForAWhile();
 							killwrongSound();
 							enemies.get(i).die();
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() - 10);
 						}
-						else {
+						else if(enemies.get(i).getType() == 0){//simple enemy
 							killSound();
 							enemies.get(i).die();
 							enemiesLeft--;
 							pipe.setScore(pipe.getScore() + 10);
+						}
+						else if(enemies.get(i).getType() == 2){// fire enemy
+							killfireSound();
+							enemies.get(i).die();
+							enemiesLeft--;
+							pipe.setScore(pipe.getScore() - 50);
+						}
+						else if(enemies.get(i).getType() == 3){// bonus enemy
+							killbonusSound();
+							enemies.get(i).die();
+							enemiesLeft--;
+							pipe.setScore(pipe.getScore() + 50);
 						}
 					}
 			}
