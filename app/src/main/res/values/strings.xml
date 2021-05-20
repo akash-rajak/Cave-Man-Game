@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello">Hello World, Caveman!</string>
-    <string name="app_name">Cave Saviour</string>
+    <string name="app_name">CaveMan - The Saviour</string>
     <string name="splash_screen">SplashScreen</string>
     <string name="highscores">highscores</string>
     <string name="credits_1">Akash Rajak</string>
@@ -52,5 +52,5 @@
     <string name="ques13">🤔\t What is there in About button of MENU page ?</string>
     <string name="ans13">\t\t\t📌 On clicking on about button, Player will be able to see information(description) about the game.</string>
     <!--<string name="end">🌞🌟🌞 PLAY N\' ENJOY 🌞🌟🌞</string>-->
-    <string name="end">🌞🌟🌞 CAVE SAVIOUR 🌞🌟🌞</string>
+    <string name="end">🌞🌟🌞 CAVEMAN-THE SAVIOUR 🌞🌟🌞</string>
 </resources>
