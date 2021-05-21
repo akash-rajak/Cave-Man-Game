@@ -1,6 +1,7 @@
 # ✔ CAVEMAN - THE SAVIOUR (GAME APP)
 
-- ### A simple Cave Man Game(flash game) with Android Studio.<br>
+- ### A 2D physics-based game app created with Android Studio and with simple graphics.<br> 
+- ### It is an enemy killing game, where player has to reach the winning score by killing the enemies. The game is also split in different level, making player to challenge different stages of enemy.<br>
 - ### Here SQLite data base is used to store the data of the player.(link to download SQLite DB Browser : https://sqlitebrowser.org/dl/<br><br>
 ****
 # ✔ How to see Database Table :
