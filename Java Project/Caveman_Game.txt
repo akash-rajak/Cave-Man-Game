@@ -1,0 +1,26 @@
+
+# ========================== CAVEMAN GAME ===================================================
+# Project Proposal for Java =========================================================================
+
+# Team Members : -------------------------------------------------------------------
+
+	1.) Akash Ramanand Rajak
+		REG No : 435
+		ROLL No : 08
+	2.) Palli Hritam Rao
+		REG No : 482
+		ROLL NO : 55
+		
+# Problem Description : -----------------------------------------------------------------------
+
+	-> A simple caveman game especially for kids.
+	-> This is an "Adventurous" game.
+	-> This allows players(users) to play with any android mobile in an very user interative manner.
+
+# Project Features : -----------------------------------------------------------
+
+	-> For this we use the platform , Android Studio.
+	-> We use JAVA Programming to develop this game app.
+	-> In the backend , we will be having the java based application code on android studio platform.
+	-> In the frontend , we will be having Android ADK Emulator or any android in which game can be installed and played.
+	-> This game app can be run on any android mobile satisying the minimum SDK requirement chosen while creating app.

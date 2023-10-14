@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back_main"
+    android:clipToPadding="false"
+    android:orientation="vertical" >
+
+   		<Button
+	        android:id="@+id/play"
+	        android:layout_width="match_parent" android:layout_height="60dp" 
+	        android:background="@drawable/button"
+	        android:text="PLAY" android:textSize="30dp" android:textStyle="bold" android:textColor="#616003"
+	        android:layout_marginTop="40dp" android:layout_marginLeft="40dp" android:layout_marginRight="40dp"/>
+	    
+	     <Button
+	        android:id="@+id/options"
+	        android:layout_width="match_parent" android:layout_height="60dp" 
+	        android:background="@drawable/button"
+	        android:text="OPTIONS" android:textSize="30dp" android:textStyle="bold" android:textColor="#616003"
+	        android:layout_marginTop="10dp" android:layout_marginLeft="40dp" android:layout_marginRight="40dp"/>
+	     
+	      <Button
+	        android:id="@+id/about"
+	        android:layout_width="match_parent" android:layout_height="60dp" 
+	        android:background="@drawable/button"
+	        android:text="ABOUT" android:textSize="30dp" android:textStyle="bold" android:textColor="#616003"
+	        android:layout_marginTop="10dp" android:layout_marginLeft="40dp" android:layout_marginRight="40dp"/>
+	
+	
+	</LinearLayout>
